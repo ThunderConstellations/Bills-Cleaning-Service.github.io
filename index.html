@@ -87,7 +87,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg text-white py-16 md:py-24">
+    <section id="home" class="hero-bg text-white py-16 md:py-24">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Sparkling Clean Spaces, Every Time</h2>
@@ -104,6 +104,42 @@
         </div>
     </section>
 
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-16 bg-clean-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">How It Works</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Getting your home or office professionally cleaned has never been easier. Follow our simple three-step process.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Step 1 -->
+                <div class="text-center relative z-10">
+                    <div class="w-20 h-20 bg-clean-blue text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">1</div>
+                    <h3 class="text-xl font-bold mb-3">Book Your Service</h3>
+                    <p class="text-gray-600">Give us a call or fill out our online form for a free estimate. We'll discuss your needs and schedule a convenient time.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center relative z-10">
+                    <div class="w-20 h-20 bg-clean-blue text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">2</div>
+                    <h3 class="text-xl font-bold mb-3">Professional Cleaning</h3>
+                    <p class="text-gray-600">Our experienced team arrives with all necessary supplies to provide a thorough, high-quality clean tailored to your space.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center relative z-10">
+                    <div class="w-20 h-20 bg-clean-blue text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">3</div>
+                    <h3 class="text-xl font-bold mb-3">Enjoy Your Space</h3>
+                    <p class="text-gray-600">Walk into a sparkling clean environment and enjoy the peace of mind that comes with a professionally cleaned space.</p>
+                </div>
+
+                <!-- Connecting Line (hidden on mobile) -->
+                <div class="hidden md:block absolute top-10 left-1/4 right-1/4 h-1 bg-blue-200 -z-0"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section id="services" class="py-16 bg-white">
         <div class="container mx-auto px-4">
@@ -116,15 +152,69 @@
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="py-16 bg-clean-light">
+    <!-- About & Why Choose Us -->
+    <section id="why-us" class="py-16 bg-clean-light">
         <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-6">About Bill's Cleaning Service</h2>
+                    <p class="text-gray-600 mb-4 text-lg leading-relaxed">
+                        Founded by Bill, a local community member with a passion for excellence, Bill's Cleaning Service was born from a simple idea: provide high-quality cleaning that families and businesses can actually rely on.
+                    </p>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        As a new local business, we don't just see a "job"—we see an opportunity to make your life easier. We bring the focus, the right tools, and a commitment to making every corner of your space shine. When you hire us, you're not just getting a cleaner; you're getting a partner who cares about your environment.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-clean-blue text-white p-4 rounded-full">
+                            <i class="fas fa-quote-left text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="italic text-gray-700 font-medium">"My goal is to treat every home and office as if it were my own. Perfection isn't just a goal; it's our standard."</p>
+                            <p class="font-bold text-clean-dark mt-2">— Bill, Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://picsum.photos/600/400?random=2" alt="Professional cleaning service" class="rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-clean-teal text-white p-8 rounded-2xl shadow-xl hidden md:block">
+                        <p class="text-4xl font-bold">100%</p>
+                        <p class="text-sm uppercase tracking-wider">Satisfaction<br>Guaranteed</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Why Choose Bill's Cleaning Service?</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">As a new local business, we bring fresh energy and commitment to every job.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Why Choose Us?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">We differentiate ourselves through reliability, attention to detail, and a personal touch that larger companies often miss.</p>
             </div>
             
             <div id="features-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section id="service-area" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Our Service Area</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-10">We proudly serve the following communities and surrounding areas. Not sure if we cover your location? Give us a call!</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <div class="bg-clean-light p-4 rounded-lg border border-gray-100 font-semibold text-clean-blue">Aurora</div>
+                <div class="bg-clean-light p-4 rounded-lg border border-gray-100 font-semibold text-clean-blue">Naperville</div>
+                <div class="bg-clean-light p-4 rounded-lg border border-gray-100 font-semibold text-clean-blue">Joliet</div>
+                <div class="bg-clean-light p-4 rounded-lg border border-gray-100 font-semibold text-clean-blue">Plainfield</div>
+                <div class="bg-clean-light p-4 rounded-lg border border-gray-100 font-semibold text-clean-blue">Bolingbrook</div>
+                <div class="bg-clean-light p-4 rounded-lg border border-gray-100 font-semibold text-clean-blue">Oswego</div>
+                <div class="bg-clean-light p-4 rounded-lg border border-gray-100 font-semibold text-clean-blue">Shorewood</div>
+                <div class="bg-clean-light p-4 rounded-lg border border-gray-100 font-semibold text-clean-blue">Yorkville</div>
+            </div>
+
+            <div class="mt-12">
+                <p class="text-clean-dark font-medium mb-4">Residential & Commercial Cleaning available in all listed areas.</p>
+                <a href="#contact" class="inline-block bg-clean-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors">
+                    Check Your Location
+                </a>
+            </div>
         </div>
     </section>
 
@@ -217,11 +307,79 @@
                                 <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent" placeholder="Tell us about your cleaning needs..."></textarea>
                             </div>
                             
-                            <button type="submit" class="w-full bg-clean-blue text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors">
-                                <i class="fas fa-paper-plane mr-2"></i>Submit Request
+                            <button type="submit" id="submit-btn" class="w-full bg-clean-blue text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors flex items-center justify-center">
+                                <span id="btn-text"><i class="fas fa-paper-plane mr-2"></i>Submit Request</span>
+                                <span id="btn-loader" class="hidden"><i class="fas fa-spinner fa-spin mr-2"></i>Sending...</span>
                             </button>
                             <p class="text-sm text-gray-600 text-center">We'll contact you within 24 hours to discuss your needs and provide a quote.</p>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-clean-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions? We have answers. If you don't see your question here, feel free to give us a call.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-clean-dark">Do I need to be home during the cleaning?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600">
+                        No, most of our customers are not home during their cleaning. You can provide us with a key, a door code, or leave a key in a secure location. We are fully insured for your peace of mind.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-clean-dark">Do you provide the cleaning supplies?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600">
+                        Yes, we bring all the necessary professional cleaning supplies and equipment. If you have specific products you'd prefer us to use, just let us know and we'll be happy to accommodate.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-clean-dark">Are you pet-friendly?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600">
+                        Absolutely! We love pets and use eco-friendly, non-toxic products that are safe for your furry friends. We just ask that you let us know if you have pets so we can be prepared.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-clean-dark">How do I pay for my service?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600">
+                        We accept various payment methods including credit/debit cards, Zelle, and cash. Payment is typically due upon completion of the service.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-clean-dark">What is your cancellation policy?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600">
+                        We understand that plans change. We request at least 24 hours notice for cancellations or rescheduling to avoid a cancellation fee.
                     </div>
                 </div>
             </div>
@@ -337,53 +495,54 @@
         // Data layer
         const navigationItems = [
             { "label": "Home", "href": "#home", "icon": "fas fa-home" },
+            { "label": "How It Works", "href": "#how-it-works", "icon": "fas fa-tasks" },
             { "label": "Services", "href": "#services", "icon": "fas fa-broom" },
-            { "label": "Why Choose Us", "href": "#why-us", "icon": "fas fa-star" },
+            { "label": "FAQ", "href": "#faq", "icon": "fas fa-question-circle" },
             { "label": "Contact", "href": "#contact", "icon": "fas fa-phone-alt" }
         ];
 
         const services = [
             { 
                 "title": "Residential Cleaning", 
-                "description": "Regular home cleaning including dusting, vacuuming, mopping, bathroom and kitchen cleaning.",
+                "description": "Keep your home consistently beautiful. Our standard cleaning covers everything you need for a comfortable living environment.",
                 "icon": "fas fa-home",
                 "color": "bg-blue-100 text-clean-blue",
-                "features": ["Living areas", "Bedrooms", "Bathrooms", "Kitchen", "Dusting & vacuuming"]
+                "features": ["Dusting all surfaces", "Vacuuming & mopping floors", "Sanitizing bathrooms", "Kitchen countertops & sinks", "General tidying up"]
             },
             { 
                 "title": "Deep Cleaning", 
-                "description": "Thorough cleaning of every corner, including baseboards, inside appliances, and hard-to-reach areas.",
+                "description": "A comprehensive top-to-bottom scrub. Ideal for seasonal cleaning or when your space needs extra attention.",
                 "icon": "fas fa-broom",
                 "color": "bg-teal-100 text-clean-teal",
-                "features": ["Baseboards & moldings", "Inside appliances", "Window sills", "Light fixtures", "Detailed sanitization"]
+                "features": ["Baseboards & door frames", "Inside window tracks", "Behind large appliances", "Deep scrubbing of tile/grout", "Detailed cabinet cleaning"]
             },
             { 
                 "title": "Move In/Out Cleaning", 
-                "description": "Complete cleaning for homes before moving in or after moving out to ensure a fresh start.",
+                "description": "Ensure a fresh start in your new home or leave your old one spotless for the next residents.",
                 "icon": "fas fa-truck-moving",
                 "color": "bg-purple-100 text-purple-700",
-                "features": ["Empty property cleaning", "Cabinet interiors", "Appliance deep clean", "Floor scrubbing", "Final inspection"]
+                "features": ["Inside all cabinets & drawers", "Full appliance deep clean", "Wall spotting", "Floor-to-ceiling dusting", "Sanitizing every surface"]
             },
             { 
-                "title": "Office Cleaning", 
-                "description": "Commercial cleaning services for offices, retail spaces, and other business establishments.",
+                "title": "Commercial Cleaning",
+                "description": "Create a professional and healthy environment for your employees and clients.",
                 "icon": "fas fa-building",
                 "color": "bg-amber-100 text-amber-700",
-                "features": ["Desk & surface cleaning", "Restroom sanitization", "Floor care", "Trash removal", "Reception areas"]
+                "features": ["Workspace sanitization", "Common area upkeep", "Waste management", "Restroom replenishment", "Nightly or weekly options"]
             },
             { 
                 "title": "Eco-Friendly Cleaning", 
-                "description": "Cleaning with environmentally safe products that are effective yet gentle on surfaces and the planet.",
+                "description": "Safe for kids, safe for pets, and safe for the planet. We use only certified non-toxic products.",
                 "icon": "fas fa-leaf",
                 "color": "bg-green-100 text-green-700",
-                "features": ["Non-toxic products", "Safe for pets & kids", "Biodegradable solutions", "Reduced plastic use", "Sustainable practices"]
+                "features": ["Plant-based solutions", "No harsh chemical odors", "Essential oil scents", "HEPA-filter vacuuming", "Sustainable materials"]
             },
             { 
-                "title": "Custom Cleaning Plans", 
-                "description": "Tailored cleaning schedules and services designed to meet your specific needs and budget.",
+                "title": "Specialty Projects",
+                "description": "Post-construction, events, or specific one-time needs. We tailor our skills to your unique situation.",
                 "icon": "fas fa-clipboard-list",
                 "color": "bg-indigo-100 text-indigo-700",
-                "features": ["Flexible scheduling", "Custom checklists", "Priority areas", "Special requests", "Budget-friendly options"]
+                "features": ["Construction dust removal", "Pre/Post event cleanup", "Interior window cleaning", "Organization services", "Custom request handling"]
             }
         ];
 
@@ -411,12 +570,10 @@
         ];
 
         const footerLinks = [
-            { "label": "Home", "href": "#" },
+            { "label": "Home", "href": "#home" },
             { "label": "Services", "href": "#services" },
             { "label": "About Us", "href": "#why-us" },
-            { "label": "Contact", "href": "#contact" },
-            { "label": "Privacy Policy", "href": "#" },
-            { "label": "Terms of Service", "href": "#" }
+            { "label": "Contact", "href": "#contact" }
         ];
 
         // Reusable render functions
@@ -437,172 +594,115 @@
                     <h3 class="text-xl font-bold text-clean-dark mb-3">${item.title}</h3>
                     <p class="text-gray-600 mb-4">${item.description}</p>
                     <ul class="space-y-2">
-                        ${item.features.map(feature =>},
-            { "label": "Deep Cleaning", "href": "#deep-cleaning" },
-            { "label": "Move-In/Out Cleaning", "href": "#move-cleaning" },
-            { "label": "Carpet Cleaning", "href": "#carpet-cleaning" }
-        ];
-
-        // Reusable render functions
-        function renderNavItems(items) {
-            return items.map(item => 
-                "<li><a href=\"" + item.href + "\" class=\"text-gray-700 hover:text-clean-blue font-medium transition\">" + 
-                "<i class=\"" + item.icon + " mr-2\"></i>" + item.label + "</a></li>"
+                        ${item.features.map(feature =>
+                            `<li class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-check text-clean-teal mr-2"></i>${feature}
+                            </li>`
+                        ).join("")}
+                    </ul>
+                </div>`
             ).join("");
         }
 
-        function renderServices(items) {
-            return items.map((item, index) => 
-                "<div class=\"service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition\">" +
-                "<div class=\"relative h-48 overflow-hidden\">" +
-                "<img src=\"" + item.image + "\" alt=\"" + item.alt + "\" class=\"w-full h-full object-cover\" loading=\"lazy\">" +
-                "<div class=\"absolute top-4 right-4 bg-clean-blue text-white p-3 rounded-full\">" +
-                "<i class=\"" + item.icon + "\"></i>" +
-                "</div>" +
-                "</div>" +
-                "<div class=\"p-6\">" +
-                "<h3 class=\"font-heading text-xl font-bold text-dark-gray mb-3\">" + item.title + "</h3>" +
-                "<p class=\"text-gray-600 mb-4\">" + item.description + "</p>" +
-                "<a href=\"#contact\" class=\"inline-flex items-center text-clean-blue font-semibold hover:text-secondary transition\">" +
-                "<span>Get Quote</span>" +
-                "<i class=\"fas fa-arrow-right ml-2\"></i>" +
-                "</a>" +
-                "</div>" +
-                "</div>"
-            ).join("");
-        }
-
-        function renderBenefits(items) {
+        function renderFeatures(items) {
             return items.map(item => 
-                "<div class=\"text-center p-6 bg-light-gray rounded-xl\">" +
-                "<div class=\"bg-clean-blue text-white p-4 rounded-full inline-block mb-4\">" +
-                "<i class=\"" + item.icon + " text-2xl\"></i>" +
-                "</div>" +
-                "<h3 class=\"font-heading text-xl font-bold text-dark-gray mb-3\">" + item.title + "</h3>" +
-                "<p class=\"text-gray-600\">" + item.description + "</p>" +
-                "</div>"
-            ).join("");
-        }
-
-        function renderTestimonials(items) {
-            return items.map(item => {
-                let stars = "";
-                for (let i = 0; i < item.rating; i++) {
-                    stars += "<i class=\"fas fa-star text-yellow-500\"></i>";
-                }
-                return "<div class=\"bg-white p-6 rounded-xl shadow-lg\">" +
-                "<div class=\"flex mb-4\">" + stars + "</div>" +
-                "<p class=\"text-gray-600 italic mb-6\">"" + item.text + ""</p>" +
-                "<div class=\"flex items-center\">" +
-                "<div class=\"w-12 h-12 bg-clean-blue rounded-full flex items-center justify-center text-white font-bold mr-4\">" +
-                item.name.charAt(0) +
-                "</div>" +
-                "<div>" +
-                "<h4 class=\"font-heading font-bold text-dark-gray\">" + item.name + "</h4>" +
-                "<p class=\"text-sm text-gray-500\">" + item.service + "</p>" +
-                "</div>" +
-                "</div>" +
-                "</div>";
-            }).join("");
-        }
-
-        function renderFooterLinks(items) {
-            return items.map(item => 
-                "<li><a href=\"" + item.href + "\" class=\"text-gray-300 hover:text-clean-blue transition\">" + item.label + "</a></li>"
+                `<div class="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <div class="text-clean-blue text-4xl mb-4">
+                        <i class="${item.icon}"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-clean-dark mb-2">${item.title}</h3>
+                    <p class="text-gray-600 text-sm">${item.description}</p>
+                </div>`
             ).join("");
         }
 
         // Initialize page content
         document.addEventListener("DOMContentLoaded", function() {
-            // Set current year in footer
+            // Set current year
             document.getElementById("current-year").textContent = new Date().getFullYear();
             
-            // Render navigation
-            document.getElementById("nav-menu").innerHTML = renderNavItems(navigationItems);
-            document.getElementById("mobile-nav-menu").innerHTML = renderNavItems(navigationItems);
-            
-            // Render services
-            document.getElementById("services-container").innerHTML = renderServices(services);
-            
-            // Render benefits
-            document.getElementById("benefits-container").innerHTML = renderBenefits(benefits);
-            
-            // Render testimonials
-            document.getElementById("testimonials-container").innerHTML = renderTestimonials(testimonials);
-            
-            // Render footer links
-            document.getElementById("footer-links-1").innerHTML = renderFooterLinks(footerLinks1);
-            document.getElementById("footer-links-2").innerHTML = renderFooterLinks(footerLinks2);
+            // Render UI components
+            document.getElementById("nav-list").innerHTML = renderNavItems(navigationItems);
+            document.getElementById("mobile-nav-list").innerHTML = renderNavItems(navigationItems);
+            document.getElementById("services-grid").innerHTML = renderServices(services);
+            document.getElementById("features-grid").innerHTML = renderFeatures(features);
+            document.getElementById("footer-links").innerHTML = footerLinks.map(link =>
+                `<li><a href="${link.href}" class="text-gray-300 hover:text-white transition-colors">${link.label}</a></li>`
+            ).join("");
             
             // Mobile menu toggle
             const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-            const mobileMenu = document.getElementById("mobile-menu");
+            const mobileNav = document.getElementById("mobile-nav");
             
-            mobileMenuBtn.addEventListener("click", function() {
-                mobileMenu.classList.toggle("hidden");
+            mobileMenuBtn.addEventListener("click", () => {
+                mobileNav.classList.toggle("hidden");
                 const icon = mobileMenuBtn.querySelector("i");
-                if (mobileMenu.classList.contains("hidden")) {
-                    icon.className = "fas fa-bars";
-                } else {
-                    icon.className = "fas fa-times";
-                }
+                icon.classList.toggle("fa-bars");
+                icon.classList.toggle("fa-times");
             });
-            
-            // Smooth scrolling for anchor links
-            document.addEventListener("click", function(event) {
-                const link = event.target.closest("a[href^='#']");
-                if (!link) return;
-                
-                const targetId = link.getAttribute("href");
-                if (targetId === "#") return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    event.preventDefault();
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: "smooth"
-                    });
+
+            // Form handling
+            const contactForm = document.getElementById("contact-form");
+            const successModal = document.getElementById("success-modal");
+            const closeModal = document.getElementById("close-modal");
+
+            if (contactForm) {
+                contactForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
                     
-                    // Close mobile menu if open
-                    if (!mobileMenu.classList.contains("hidden")) {
-                        mobileMenu.classList.add("hidden");
-                        mobileMenuBtn.querySelector("i").className = "fas fa-bars";
+                    const submitBtn = document.getElementById("submit-btn");
+                    const btnText = document.getElementById("btn-text");
+                    const btnLoader = document.getElementById("btn-loader");
+
+                    // Basic validation check
+                    const phone = document.getElementById("phone").value;
+                    const phoneRegex = /^[0-9\-+() ]{7,20}$/;
+                    if (!phoneRegex.test(phone)) {
+                        alert("Please enter a valid phone number.");
+                        return;
                     }
-                }
-            });
-            
-            // Form submission handling
-            const quoteForm = document.getElementById("quote-form");
-            if (quoteForm) {
-                quoteForm.addEventListener("submit", function(event) {
-                    event.preventDefault();
-                    
-                    // Get form data
-                    const formData = {
-                        name: document.getElementById("name").value,
-                        phone: document.getElementById("phone").value,
-                        email: document.getElementById("email").value,
-                        serviceType: document.getElementById("service-type").value,
-                        message: document.getElementById("message").value
-                    };
-                    
-                    // In a real implementation, you would send this data to a server
-                    // For demo purposes, we'll show a success message
-                    alert("Thank you, " + formData.name + "! Your quote request has been submitted. We'll contact you at " + formData.phone + " within 24 hours.");
-                    
-                    // Reset form
-                    quoteForm.reset();
+
+                    // Show loading state
+                    submitBtn.disabled = true;
+                    btnText.classList.add("hidden");
+                    btnLoader.classList.remove("hidden");
+
+                    // Simulate API call
+                    setTimeout(() => {
+                        successModal.classList.remove("hidden");
+                        contactForm.reset();
+
+                        // Reset button state
+                        submitBtn.disabled = false;
+                        btnText.classList.remove("hidden");
+                        btnLoader.classList.add("hidden");
+                    }, 1500);
                 });
             }
-            
-            // Phone number click tracking (for analytics)
-            const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-            phoneLinks.forEach(link => {
-                link.addEventListener("click", function() {
-                    console.log("Phone number clicked: 779-390-4663");
-                    // In a real implementation, you would send this to analytics
+
+            if (closeModal) {
+                closeModal.addEventListener("click", () => {
+                    successModal.classList.add("hidden");
                 });
+            }
+
+            // FAQ Accordion
+            const faqBtns = document.querySelectorAll(".faq-btn");
+            faqBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector("i");
+
+                    content.classList.toggle("hidden");
+                    icon.classList.toggle("rotate-180");
+                });
+            });
+
+            // Close modal on click outside
+            window.addEventListener("click", (e) => {
+                if (e.target === successModal) {
+                    successModal.classList.add("hidden");
+                }
             });
         });
     </script>
