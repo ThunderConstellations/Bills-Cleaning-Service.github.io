@@ -32,7 +32,7 @@
             scroll-behavior: smooth;
         }
         .hero-bg {
-            background: linear-gradient(rgba(30, 64, 175, 0.85), rgba(30, 64, 175, 0.9)), url('https://picsum.photos/1600/900?random=1');
+            background: linear-gradient(rgba(30, 64, 175, 0.75), rgba(30, 64, 175, 0.8)), url('images/IMG_3494.jpeg');
             background-size: cover;
             background-position: center;
         }
@@ -51,8 +51,13 @@
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-clean-light">
+    <!-- Promotional Banner -->
+    <div class="bg-clean-teal text-white py-2 text-center text-sm font-medium sticky top-0 z-[60]">
+        <i class="fas fa-tags mr-2"></i>New Customer Special: <span class="font-bold underline">20% OFF</span> your first cleaning! Mention "WEB20"
+    </div>
+
     <!-- Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
+    <header class="sticky top-[36px] z-50 bg-white shadow-md">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-2">
@@ -148,7 +153,100 @@
                 <p class="text-gray-600 max-w-2xl mx-auto">We offer comprehensive cleaning solutions tailored to your needs. As a new business, we're committed to exceeding your expectations with every service.</p>
             </div>
             
-            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
+
+            <!-- Service Checklist Toggle -->
+            <div class="max-w-4xl mx-auto bg-clean-light rounded-2xl p-8 border border-gray-200">
+                <h3 class="text-2xl font-bold text-clean-dark text-center mb-8">What's Included in Our Cleaning?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h4 class="text-xl font-bold text-clean-blue mb-4 flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>Standard Clean
+                        </h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Dusting all reachable surfaces</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Vacuuming & mopping all floors</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Sanitizing bathrooms (toilet, tub, mirror)</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Kitchen exterior cleaning (stove, counters)</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Emptying trash bins</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-clean-teal mb-4 flex items-center">
+                            <i class="fas fa-plus-circle mr-2"></i>Deep Clean (Plus Everything in Standard)
+                        </h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Detailing baseboards & door frames</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Cleaning behind/under light appliances</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Wiping window sills & tracks</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Deep scrubbing tile & grout</li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Dusting ceiling fans & vents</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-10">
+                    <p class="text-gray-600 mb-4 italic">Custom checklists available for Move In/Out and Commercial jobs.</p>
+                    <a href="#contact" class="text-clean-blue font-bold hover:underline">Get a detailed quote for your project <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Promise Section -->
+    <section class="py-16 bg-clean-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Promise to You</h2>
+                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                        At Bill's Cleaning Service, we believe a clean home is a happy home. We are committed to two core pillars that define our business:
+                    </p>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="bg-clean-teal text-white p-4 rounded-xl mr-6">
+                                <i class="fas fa-shield-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">100% Satisfaction Guarantee</h3>
+                                <p class="text-gray-400">If you're not completely happy with any part of our service, notify us within 24 hours and we'll return to make it right at no extra cost.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-green-600 text-white p-4 rounded-xl mr-6">
+                                <i class="fas fa-leaf text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Eco-Friendly & Safe Products</h3>
+                                <p class="text-gray-400">We prioritize the health of your family and pets. We use non-toxic, biodegradable products that are tough on dirt but gentle on your environment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white bg-opacity-5 p-8 rounded-2xl text-center border border-white border-opacity-10">
+                        <div class="text-clean-teal text-4xl mb-4"><i class="fas fa-user-check"></i></div>
+                        <h4 class="font-bold text-lg">Fully Insured</h4>
+                        <p class="text-sm text-gray-400 mt-2">Peace of mind for your property.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-5 p-8 rounded-2xl text-center border border-white border-opacity-10">
+                        <div class="text-clean-teal text-4xl mb-4"><i class="fas fa-award"></i></div>
+                        <h4 class="font-bold text-lg">Top Rated</h4>
+                        <p class="text-sm text-gray-400 mt-2">Committed to excellence.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-5 p-8 rounded-2xl text-center border border-white border-opacity-10">
+                        <div class="text-clean-teal text-4xl mb-4"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h4 class="font-bold text-lg">Local Care</h4>
+                        <p class="text-sm text-gray-400 mt-2">Supporting our community.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-5 p-8 rounded-2xl text-center border border-white border-opacity-10">
+                        <div class="text-clean-teal text-4xl mb-4"><i class="fas fa-clock"></i></div>
+                        <h4 class="font-bold text-lg">On-Time</h4>
+                        <p class="text-sm text-gray-400 mt-2">Respecting your busy schedule.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -175,7 +273,7 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <img src="https://picsum.photos/600/400?random=2" alt="Professional cleaning service" class="rounded-2xl shadow-2xl">
+                    <img src="images/IMG_2395.jpeg" alt="Bill's Cleaning Service Professional" class="rounded-2xl shadow-2xl w-full h-auto object-cover">
                     <div class="absolute -bottom-6 -right-6 bg-clean-teal text-white p-8 rounded-2xl shadow-xl hidden md:block">
                         <p class="text-4xl font-bold">100%</p>
                         <p class="text-sm uppercase tracking-wider">Satisfaction<br>Guaranteed</p>
@@ -192,17 +290,47 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Our Work in Action</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">See the quality and care we bring to every cleaning project.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group overflow-hidden rounded-xl shadow-md h-80">
+                    <img src="images/IMG_3494.jpeg" alt="Deep cleaned living space" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="group overflow-hidden rounded-xl shadow-md h-80">
+                    <img src="images/IMG_3331.jpeg" alt="Residential floor cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="group overflow-hidden rounded-xl shadow-md h-80">
+                    <img src="images/IMG_4314.jpeg" alt="Commercial kitchen cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="group overflow-hidden rounded-xl shadow-md h-80">
+                    <img src="images/IMG_2395.jpeg" alt="Professional cleaning equipment" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="group overflow-hidden rounded-xl shadow-md h-80">
+                    <img src="images/IMG_0299.jpeg" alt="Cleaning in progress" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="group overflow-hidden rounded-xl shadow-md h-80">
+                    <img src="images/IMG_7972.jpeg" alt="Detail cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Service Area Section -->
-    <section id="service-area" class="py-16 bg-white">
+    <section id="service-area" class="py-16 bg-clean-light">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Our Service Area</h2>
             <p class="text-gray-600 max-w-2xl mx-auto mb-10">We proudly serve the following communities and surrounding areas. Not sure if we cover your location? Give us a call!</p>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                <div class="bg-clean-light p-4 rounded-lg border border-gray-100 font-semibold text-clean-blue">Valparaiso</div>
-                <div class="bg-clean-light p-4 rounded-lg border border-gray-100 font-semibold text-clean-blue">Chicago</div>
-                <div class="bg-clean-light p-4 rounded-lg border border-gray-100 font-semibold text-clean-blue">Lockport</div>
-                <div class="bg-clean-light p-4 rounded-lg border border-gray-100 font-semibold text-clean-blue">Joliet</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-semibold text-clean-blue">Valparaiso</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-semibold text-clean-blue">Chicago</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-semibold text-clean-blue">Lockport</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-semibold text-clean-blue">Joliet</div>
             </div>
 
             <div class="mt-12">
@@ -244,7 +372,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-lg">Email Us</h4>
-                                    <a href="mailto:info@billscleaningservice.com" class="text-xl hover:underline">info@billscleaningservice.com</a>
+                                    <a href="mailto:Billscleaningservice779@gmail.com" class="text-xl hover:underline">Billscleaningservice779@gmail.com</a>
                                     <p class="opacity-90">We respond within 24 hours</p>
                                 </div>
                             </div>
@@ -257,6 +385,23 @@
                                     <h4 class="font-bold text-lg">Service Area</h4>
                                     <p class="text-xl">Valparaiso, Chicago, Lockport, Joliet</p>
                                     <p class="opacity-90">Residential and commercial properties</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-white text-clean-blue p-3 rounded-full mr-4">
+                                    <i class="fas fa-share-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Follow Us</h4>
+                                    <div class="flex space-x-4 mt-2">
+                                        <a href="https://x.com/Billscleanser" target="_blank" class="hover:text-clean-teal transition-colors text-2xl">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/Billscleaning779/" target="_blank" class="hover:text-clean-teal transition-colors text-2xl">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -286,21 +431,50 @@
                                 <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent">
                             </div>
                             
-                            <div>
-                                <label for="service-type" class="block mb-2 font-medium">Service Type *</label>
-                                <select id="service-type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent">
-                                    <option value="">Select a service</option>
-                                    <option value="residential">Residential Cleaning</option>
-                                    <option value="deep">Deep Cleaning</option>
-                                    <option value="move">Move In/Out Cleaning</option>
-                                    <option value="office">Office Cleaning</option>
-                                    <option value="other">Other</option>
-                                </select>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="service-type" class="block mb-2 font-medium">Service Type *</label>
+                                    <select id="service-type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent">
+                                        <option value="">Select a service</option>
+                                        <option value="residential">Residential Cleaning</option>
+                                        <option value="deep">Deep Cleaning</option>
+                                        <option value="move">Move In/Out Cleaning</option>
+                                        <option value="office">Office Cleaning</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="property-size" class="block mb-2 font-medium">Property Size (Approx.)</label>
+                                    <select id="property-size" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent">
+                                        <option value="">Select size</option>
+                                        <option value="studio">Studio / 1 BR</option>
+                                        <option value="medium">2-3 Bedrooms</option>
+                                        <option value="large">4+ Bedrooms</option>
+                                        <option value="office">Small Office</option>
+                                        <option value="commercial">Large Commercial</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="frequency" class="block mb-2 font-medium">Desired Frequency</label>
+                                    <select id="frequency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent">
+                                        <option value="one-time">One-time Clean</option>
+                                        <option value="weekly">Weekly</option>
+                                        <option value="bi-weekly">Bi-weekly</option>
+                                        <option value="monthly">Monthly</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="promo-code" class="block mb-2 font-medium">Promo Code</label>
+                                    <input type="text" id="promo-code" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent" placeholder="e.g. WEB20">
+                                </div>
                             </div>
                             
                             <div>
                                 <label for="message" class="block mb-2 font-medium">Additional Details</label>
-                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent" placeholder="Tell us about your cleaning needs..."></textarea>
+                                <textarea id="message" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent" placeholder="Number of bathrooms, pets, specific areas of focus, etc."></textarea>
                             </div>
                             
                             <button type="submit" id="submit-btn" class="w-full bg-clean-blue text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors flex items-center justify-center">
@@ -426,10 +600,10 @@
                         <a href="#" class="bg-gray-700 hover:bg-gray-600 p-3 rounded-full transition-colors">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="bg-gray-700 hover:bg-gray-600 p-3 rounded-full transition-colors">
+                        <a href="https://x.com/Billscleanser" target="_blank" class="bg-gray-700 hover:bg-gray-600 p-3 rounded-full transition-colors">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="bg-gray-700 hover:bg-gray-600 p-3 rounded-full transition-colors">
+                        <a href="https://www.instagram.com/Billscleaning779/" target="_blank" class="bg-gray-700 hover:bg-gray-600 p-3 rounded-full transition-colors">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -449,7 +623,7 @@
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope mt-1 mr-3 text-clean-teal"></i>
-                            <a href="mailto:info@billscleaningservice.com" class="hover:underline">info@billscleaningservice.com</a>
+                            <a href="mailto:Billscleaningservice779@gmail.com" class="hover:underline">Billscleaningservice779@gmail.com</a>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-clock mt-1 mr-3 text-clean-teal"></i>
@@ -493,6 +667,7 @@
             { "label": "Home", "href": "#home", "icon": "fas fa-home" },
             { "label": "How It Works", "href": "#how-it-works", "icon": "fas fa-tasks" },
             { "label": "Services", "href": "#services", "icon": "fas fa-broom" },
+            { "label": "Gallery", "href": "#gallery", "icon": "fas fa-images" },
             { "label": "FAQ", "href": "#faq", "icon": "fas fa-question-circle" },
             { "label": "Contact", "href": "#contact", "icon": "fas fa-phone-alt" }
         ];
@@ -502,6 +677,7 @@
                 "title": "Residential Cleaning", 
                 "description": "Keep your home consistently beautiful. Our standard cleaning covers everything you need for a comfortable living environment.",
                 "icon": "fas fa-home",
+                "image": "images/IMG_3331.jpeg",
                 "color": "bg-blue-100 text-clean-blue",
                 "features": ["Dusting all surfaces", "Vacuuming & mopping floors", "Sanitizing bathrooms", "Kitchen countertops & sinks", "General tidying up"]
             },
@@ -509,6 +685,7 @@
                 "title": "Deep Cleaning", 
                 "description": "A comprehensive top-to-bottom scrub. Ideal for seasonal cleaning or when your space needs extra attention.",
                 "icon": "fas fa-broom",
+                "image": "images/IMG_3494.jpeg",
                 "color": "bg-teal-100 text-clean-teal",
                 "features": ["Baseboards & door frames", "Inside window tracks", "Behind large appliances", "Deep scrubbing of tile/grout", "Detailed cabinet cleaning"]
             },
@@ -516,6 +693,7 @@
                 "title": "Move In/Out Cleaning", 
                 "description": "Ensure a fresh start in your new home or leave your old one spotless for the next residents.",
                 "icon": "fas fa-truck-moving",
+                "image": "images/IMG_2395.jpeg",
                 "color": "bg-purple-100 text-purple-700",
                 "features": ["Inside all cabinets & drawers", "Full appliance deep clean", "Wall spotting", "Floor-to-ceiling dusting", "Sanitizing every surface"]
             },
@@ -523,6 +701,7 @@
                 "title": "Commercial Cleaning",
                 "description": "Create a professional and healthy environment for your employees and clients.",
                 "icon": "fas fa-building",
+                "image": "images/IMG_4314.jpeg",
                 "color": "bg-amber-100 text-amber-700",
                 "features": ["Workspace sanitization", "Common area upkeep", "Waste management", "Restroom replenishment", "Nightly or weekly options"]
             },
@@ -530,6 +709,7 @@
                 "title": "Eco-Friendly Cleaning", 
                 "description": "Safe for kids, safe for pets, and safe for the planet. We use only certified non-toxic products.",
                 "icon": "fas fa-leaf",
+                "image": "images/IMG_0299.jpeg",
                 "color": "bg-green-100 text-green-700",
                 "features": ["Plant-based solutions", "No harsh chemical odors", "Essential oil scents", "HEPA-filter vacuuming", "Sustainable materials"]
             },
@@ -537,6 +717,7 @@
                 "title": "Specialty Projects",
                 "description": "Post-construction, events, or specific one-time needs. We tailor our skills to your unique situation.",
                 "icon": "fas fa-clipboard-list",
+                "image": "images/IMG_7972.jpeg",
                 "color": "bg-indigo-100 text-indigo-700",
                 "features": ["Construction dust removal", "Pre/Post event cleanup", "Interior window cleaning", "Organization services", "Custom request handling"]
             }
@@ -583,19 +764,26 @@
 
         function renderServices(items) {
             return items.map(item => 
-                `<div class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 transition-all duration-300">
-                    <div class="${item.color} p-4 rounded-lg inline-block mb-4">
-                        <i class="${item.icon} text-2xl"></i>
+                `<div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
-                    <h3 class="text-xl font-bold text-clean-dark mb-3">${item.title}</h3>
-                    <p class="text-gray-600 mb-4">${item.description}</p>
-                    <ul class="space-y-2">
-                        ${item.features.map(feature =>
-                            `<li class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-check text-clean-teal mr-2"></i>${feature}
-                            </li>`
-                        ).join("")}
-                    </ul>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="${item.color} p-3 rounded-lg mr-3">
+                                <i class="${item.icon} text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-clean-dark">${item.title}</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">${item.description}</p>
+                        <ul class="space-y-2">
+                            ${item.features.map(feature =>
+                                `<li class="flex items-center text-sm text-gray-500">
+                                    <i class="fas fa-check text-clean-teal mr-2"></i>${feature}
+                                </li>`
+                            ).join("")}
+                        </ul>
+                    </div>
                 </div>`
             ).join("");
         }
