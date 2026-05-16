@@ -17,3 +17,8 @@ All notable changes to this project will be documented in this file.
 
 ## [2024-05-22] - Updated Service Areas
 - Restricted service areas to Valparaiso, Chicago, Lockport, and Joliet as requested.
+
+## [2024-05-22] - Final Refinements & Branding
+- Updated contact email to `Billscleaningservice779@gmail.com`.
+- Added social media links for X (`@Billscleanser`) and Instagram (`Billscleaning779`).
+- Final verification of location and contact data across all files.
