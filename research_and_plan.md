@@ -49,3 +49,4 @@ To build a successful cleaning service website, the following elements are essen
 - [x] Verify responsiveness.
 - [x] Check all links.
 - [x] HTML validation.
+- [x] Update brand contact info (Email: Billscleaningservice779@gmail.com, X: @Billscleanser, IG: Billscleaning779).
