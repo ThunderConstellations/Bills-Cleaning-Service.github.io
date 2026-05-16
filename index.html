@@ -32,13 +32,16 @@
             scroll-behavior: smooth;
         }
         .hero-bg {
-            background: linear-gradient(rgba(30, 64, 175, 0.75), rgba(30, 64, 175, 0.8)), url('images/IMG_3494.jpeg');
+            background: linear-gradient(rgba(30, 64, 175, 0.6), rgba(15, 23, 42, 0.8)), url('images/IMG_3494.jpeg');
             background-size: cover;
-            background-position: center;
+            background-position: center 30%;
+        }
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         .phone-pulse {
             animation: pulse 2s infinite;
@@ -47,6 +50,22 @@
             0% { box-shadow: 0 0 0 0 rgba(30, 64, 175, 0.7); }
             70% { box-shadow: 0 0 0 10px rgba(30, 64, 175, 0); }
             100% { box-shadow: 0 0 0 0 rgba(30, 64, 175, 0); }
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .img-natural {
+            filter: saturate(1.05) contrast(1.02);
+            transition: filter 0.3s ease;
+        }
+        .img-natural:hover {
+            filter: saturate(1.1) contrast(1.05);
         }
     </style>
 </head>
@@ -110,7 +129,7 @@
     </section>
 
     <!-- How It Works -->
-    <section id="how-it-works" class="py-16 bg-clean-light">
+    <section id="how-it-works" class="py-16 bg-clean-light reveal">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">How It Works</h2>
@@ -146,7 +165,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 bg-white">
+    <section id="services" class="py-16 bg-white reveal">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Our Cleaning Services</h2>
@@ -193,7 +212,7 @@
     </section>
 
     <!-- Our Promise Section -->
-    <section class="py-16 bg-clean-dark text-white">
+    <section class="py-16 bg-clean-dark text-white reveal">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div>
@@ -251,7 +270,7 @@
     </section>
 
     <!-- About & Why Choose Us -->
-    <section id="why-us" class="py-16 bg-clean-light">
+    <section id="why-us" class="py-16 bg-clean-light reveal">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                 <div>
@@ -291,30 +310,30 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-16 bg-white">
+    <section id="gallery" class="py-16 bg-white reveal">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Our Work in Action</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">See the quality and care we bring to every cleaning project.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="group overflow-hidden rounded-xl shadow-md h-80">
-                    <img src="images/IMG_3494.jpeg" alt="Deep cleaned living space" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="group overflow-hidden rounded-2xl shadow-lg aspect-square">
+                    <img src="images/IMG_3494.jpeg" alt="Deep cleaned living space" class="w-full h-full object-cover img-natural transition-transform duration-700 group-hover:scale-110">
                 </div>
-                <div class="group overflow-hidden rounded-xl shadow-md h-80">
-                    <img src="images/IMG_3331.jpeg" alt="Residential floor cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="group overflow-hidden rounded-2xl shadow-lg aspect-square">
+                    <img src="images/IMG_3331.jpeg" alt="Residential floor cleaning" class="w-full h-full object-cover img-natural transition-transform duration-700 group-hover:scale-110">
                 </div>
-                <div class="group overflow-hidden rounded-xl shadow-md h-80">
-                    <img src="images/IMG_4314.jpeg" alt="Commercial kitchen cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="group overflow-hidden rounded-2xl shadow-lg aspect-square">
+                    <img src="images/IMG_4314.jpeg" alt="Commercial kitchen cleaning" class="w-full h-full object-cover img-natural transition-transform duration-700 group-hover:scale-110">
                 </div>
-                <div class="group overflow-hidden rounded-xl shadow-md h-80">
-                    <img src="images/IMG_2395.jpeg" alt="Professional cleaning equipment" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="group overflow-hidden rounded-2xl shadow-lg aspect-square">
+                    <img src="images/IMG_2395.jpeg" alt="Professional cleaning equipment" class="w-full h-full object-cover img-natural transition-transform duration-700 group-hover:scale-110">
                 </div>
-                <div class="group overflow-hidden rounded-xl shadow-md h-80">
-                    <img src="images/IMG_0299.jpeg" alt="Cleaning in progress" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="group overflow-hidden rounded-2xl shadow-lg aspect-square">
+                    <img src="images/IMG_0299.jpeg" alt="Cleaning in progress" class="w-full h-full object-cover img-natural transition-transform duration-700 group-hover:scale-110 object-top">
                 </div>
-                <div class="group overflow-hidden rounded-xl shadow-md h-80">
-                    <img src="images/IMG_7972.jpeg" alt="Detail cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="group overflow-hidden rounded-2xl shadow-lg aspect-square">
+                    <img src="images/IMG_7972.jpeg" alt="Detail cleaning" class="w-full h-full object-cover img-natural transition-transform duration-700 group-hover:scale-110 object-center">
                 </div>
             </div>
         </div>
@@ -761,9 +780,9 @@
 
         function renderServices(items) {
             return items.map(item => 
-                `<div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition-all duration-300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                `<div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover img-natural transition-transform duration-700 hover:scale-110 ${item.image.includes('IMG_7972') ? 'object-center' : ''} ${item.image.includes('IMG_0299') ? 'object-top' : ''}">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
@@ -878,6 +897,21 @@
                     icon.classList.toggle("rotate-180");
                 });
             });
+
+            // Scroll Reveal Animation
+            const revealElements = document.querySelectorAll(".reveal");
+            const revealOnScroll = () => {
+                for (let i = 0; i < revealElements.length; i++) {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = revealElements[i].getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    if (elementTop < windowHeight - elementVisible) {
+                        revealElements[i].classList.add("active");
+                    }
+                }
+            };
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll(); // Initial check
 
             // Close modal on click outside
             window.addEventListener("click", (e) => {
