@@ -169,43 +169,43 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Our Cleaning Services</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">We offer comprehensive cleaning solutions tailored to your needs. As a new business, we're committed to exceeding your expectations with every service.</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">We offer comprehensive cleaning solutions tailored to your needs. Select a service to see exactly what we cover.</p>
             </div>
             
             <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
 
-            <!-- Service Checklist Toggle -->
-            <div class="max-w-4xl mx-auto bg-clean-light rounded-2xl p-8 border border-gray-200">
-                <h3 class="text-2xl font-bold text-clean-dark text-center mb-8">What's Included in Our Cleaning?</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div>
-                        <h4 class="text-xl font-bold text-clean-blue mb-4 flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i>Standard Clean
-                        </h4>
-                        <ul class="space-y-3">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Dusting all reachable surfaces</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Vacuuming & mopping all floors</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Sanitizing bathrooms (toilet, tub, mirror)</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Kitchen exterior cleaning (stove, counters)</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Emptying trash bins</li>
-                        </ul>
+            <!-- Reactive Service Checklist -->
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-clean-light rounded-3xl p-8 md:p-12 border border-gray-200 shadow-xl overflow-hidden relative">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-clean-blue opacity-5 -mr-16 -mt-16 rounded-full"></div>
+
+                    <h3 class="text-3xl font-bold text-clean-dark text-center mb-10">Service Checklist</h3>
+
+                    <div class="flex flex-wrap justify-center gap-3 mb-12">
+                        <button onclick="updateChecklist('standard')" id="tab-standard" class="checklist-tab px-6 py-3 rounded-full font-bold transition-all border-2 border-clean-blue bg-clean-blue text-white shadow-md">
+                            Standard Clean
+                        </button>
+                        <button onclick="updateChecklist('deep')" id="tab-deep" class="checklist-tab px-6 py-3 rounded-full font-bold transition-all border-2 border-clean-blue text-clean-blue hover:bg-clean-blue hover:text-white">
+                            Deep Clean
+                        </button>
+                        <button onclick="updateChecklist('move')" id="tab-move" class="checklist-tab px-6 py-3 rounded-full font-bold transition-all border-2 border-clean-blue text-clean-blue hover:bg-clean-blue hover:text-white">
+                            Move In/Out
+                        </button>
+                        <button onclick="updateChecklist('office')" id="tab-office" class="checklist-tab px-6 py-3 rounded-full font-bold transition-all border-2 border-clean-blue text-clean-blue hover:bg-clean-blue hover:text-white">
+                            Office Clean
+                        </button>
                     </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-clean-teal mb-4 flex items-center">
-                            <i class="fas fa-plus-circle mr-2"></i>Deep Clean (Plus Everything in Standard)
-                        </h4>
-                        <ul class="space-y-3">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Detailing baseboards & door frames</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Cleaning behind/under light appliances</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Wiping window sills & tracks</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Deep scrubbing tile & grout</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Dusting ceiling fans & vents</li>
-                        </ul>
+
+                    <div id="checklist-content" class="grid grid-cols-1 md:grid-cols-3 gap-8 transition-opacity duration-300">
+                        <!-- Content injected by JS -->
                     </div>
-                </div>
-                <div class="text-center mt-10">
-                    <p class="text-gray-600 mb-4 italic">Custom checklists available for Move In/Out and Commercial jobs.</p>
-                    <a href="#contact" class="text-clean-blue font-bold hover:underline">Get a detailed quote for your project <i class="fas fa-arrow-right ml-1"></i></a>
+
+                    <div class="mt-12 text-center pt-8 border-t border-gray-200">
+                        <p class="text-gray-600 mb-6 font-medium">Need something specific? We offer fully customizable cleaning plans.</p>
+                        <a href="#contact" class="inline-flex items-center justify-center bg-clean-blue text-white font-bold py-4 px-10 rounded-xl hover:bg-blue-800 transition-all shadow-lg hover:shadow-2xl hover:-translate-y-1">
+                            Request Custom Quote <i class="fas fa-magic ml-2"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -309,6 +309,41 @@
         </div>
     </section>
 
+    <!-- Visual Results Section (Reactive Slider) -->
+    <section class="py-16 bg-clean-light reveal">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">See the Difference</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Slide to see our cleaning results in action. We don't just clean; we transform your space.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="relative group rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                    <!-- Images from user provided assets -->
+                    <div class="aspect-video relative">
+                        <img src="images/IMG_3494.jpeg" alt="After cleaning" class="absolute inset-0 w-full h-full object-cover">
+                        <div id="before-image" class="absolute inset-0 w-1/2 overflow-hidden border-r-4 border-white z-10">
+                            <!-- Using a slightly desaturated/darkened version of the same image to simulate 'before' since we don't have true before/after pairs -->
+                            <img src="images/IMG_3494.jpeg" alt="Before cleaning" class="absolute inset-0 w-[896px] max-w-none h-full object-cover grayscale brightness-75">
+                        </div>
+
+                        <!-- Slider Control -->
+                        <input type="range" min="0" max="100" value="50" id="comparison-slider" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30">
+                        <div id="slider-line" class="absolute top-0 bottom-0 left-1/2 w-1 bg-white z-20 pointer-events-none">
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center">
+                                <i class="fas fa-arrows-alt-h text-clean-blue"></i>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-4 py-1 rounded-full text-sm font-bold z-20 pointer-events-none">BEFORE</div>
+                        <div class="absolute bottom-4 right-4 bg-clean-blue bg-opacity-70 text-white px-4 py-1 rounded-full text-sm font-bold z-20 pointer-events-none">AFTER</div>
+                    </div>
+                </div>
+                <p class="text-center mt-6 text-gray-500 italic">Example of deep cleaning results in Valparaiso</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Gallery Section -->
     <section id="gallery" class="py-16 bg-white reveal">
         <div class="container mx-auto px-4">
@@ -339,24 +374,143 @@
         </div>
     </section>
 
-    <!-- Service Area Section -->
-    <section id="service-area" class="py-16 bg-clean-light">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Our Service Area</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto mb-10">We proudly serve the following communities and surrounding areas. Not sure if we cover your location? Give us a call!</p>
+    <!-- Reactive Quote Calculator Section -->
+    <section id="calculator" class="py-16 bg-clean-dark text-white reveal">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Instant Estimate</h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        Want a quick idea of the cost? Use our reactive calculator to get an instant estimate based on your home's size and needs.
+                    </p>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-semibold text-clean-blue">Valparaiso</div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-semibold text-clean-blue">Chicago</div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-semibold text-clean-blue">Lockport</div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-semibold text-clean-blue">Joliet</div>
+                    <div class="space-y-6 bg-white bg-opacity-5 p-8 rounded-3xl border border-white border-opacity-10">
+                        <div>
+                            <label class="block mb-3 font-bold text-clean-teal">Number of Bedrooms</label>
+                            <div class="flex items-center space-x-4">
+                                <button onclick="adjustRooms(-1)" class="w-12 h-12 rounded-xl bg-gray-700 hover:bg-gray-600 flex items-center justify-center text-xl transition-colors">-</button>
+                                <span id="room-count" class="text-3xl font-bold w-8 text-center">2</span>
+                                <button onclick="adjustRooms(1)" class="w-12 h-12 rounded-xl bg-clean-blue hover:bg-blue-600 flex items-center justify-center text-xl transition-colors">+</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block mb-3 font-bold text-clean-teal">Service Level</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button onclick="setCalcLevel('standard')" id="calc-standard" class="calc-level-btn py-3 rounded-xl border-2 border-clean-blue bg-clean-blue font-bold transition-all">Standard</button>
+                                <button onclick="setCalcLevel('deep')" id="calc-deep" class="calc-level-btn py-3 rounded-xl border-2 border-gray-700 font-bold transition-all hover:border-clean-blue">Deep Clean</button>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-white border-opacity-10">
+                            <div class="flex justify-between items-end">
+                                <div>
+                                    <p class="text-gray-400 text-sm uppercase tracking-widest font-bold mb-1">Estimated Starting Price</p>
+                                    <div class="text-5xl font-bold text-white">$<span id="total-estimate">120</span></div>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xs text-gray-500 mb-2">* Final price may vary</p>
+                                    <a href="#contact" class="inline-block bg-clean-teal text-white font-bold py-2 px-6 rounded-lg hover:bg-teal-600 transition-colors">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="relative">
+                        <img src="images/IMG_2395.jpeg" alt="Professional cleaning" class="rounded-3xl shadow-2xl opacity-80">
+                        <div class="absolute inset-0 bg-gradient-to-t from-clean-dark via-transparent to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 right-8">
+                            <div class="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-2xl border border-white border-opacity-20">
+                                <i class="fas fa-info-circle text-clean-teal mb-3 text-2xl"></i>
+                                <p class="text-sm leading-relaxed text-gray-200">Our pricing is transparent and competitive. We factor in the number of rooms, the level of cleaning required, and any specialty tasks to ensure you get the best value.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section (Enhanced with SEO Local Pages) -->
+    <section id="service-area" class="py-24 bg-clean-light reveal">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Communities We Serve</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Bill's Cleaning Service is proud to be a local favorite across Northwest Indiana and the Greater Chicago area.</p>
             </div>
 
-            <div class="mt-12">
-                <p class="text-clean-dark font-medium mb-4">Residential & Commercial Cleaning available in all listed areas.</p>
-                <a href="#contact" class="inline-block bg-clean-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors">
-                    Check Your Location
-                </a>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Valparaiso -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group">
+                    <div class="w-16 h-16 bg-blue-50 text-clean-blue rounded-2xl flex items-center justify-center mb-6 group-hover:bg-clean-blue group-hover:text-white transition-colors">
+                        <i class="fas fa-map-marked-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-clean-dark mb-3">Valparaiso</h3>
+                    <p class="text-gray-500 text-sm mb-6">Expert residential and deep cleaning for Valparaiso homes and local businesses.</p>
+                    <ul class="space-y-2 mb-8">
+                        <li class="text-xs text-gray-400 flex items-center"><i class="fas fa-check text-clean-teal mr-2"></i> Porter County</li>
+                        <li class="text-xs text-gray-400 flex items-center"><i class="fas fa-check text-clean-teal mr-2"></i> Downtown Valpo</li>
+                    </ul>
+                    <a href="#contact" class="text-clean-blue font-bold text-sm flex items-center group-hover:underline">
+                        Book in Valpo <i class="fas fa-chevron-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Chicago -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group">
+                    <div class="w-16 h-16 bg-blue-50 text-clean-blue rounded-2xl flex items-center justify-center mb-6 group-hover:bg-clean-blue group-hover:text-white transition-colors">
+                        <i class="fas fa-city text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-clean-dark mb-3">Chicago</h3>
+                    <p class="text-gray-500 text-sm mb-6">Professional office cleaning and apartment maintenance throughout the Chicago area.</p>
+                    <ul class="space-y-2 mb-8">
+                        <li class="text-xs text-gray-400 flex items-center"><i class="fas fa-check text-clean-teal mr-2"></i> South Side</li>
+                        <li class="text-xs text-gray-400 flex items-center"><i class="fas fa-check text-clean-teal mr-2"></i> Loop Districts</li>
+                    </ul>
+                    <a href="#contact" class="text-clean-blue font-bold text-sm flex items-center group-hover:underline">
+                        Book in Chicago <i class="fas fa-chevron-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Lockport -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group">
+                    <div class="w-16 h-16 bg-blue-50 text-clean-blue rounded-2xl flex items-center justify-center mb-6 group-hover:bg-clean-blue group-hover:text-white transition-colors">
+                        <i class="fas fa-home text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-clean-dark mb-3">Lockport</h3>
+                    <p class="text-gray-500 text-sm mb-6">Reliable move-in/out and recurring cleaning services for Lockport residents.</p>
+                    <ul class="space-y-2 mb-8">
+                        <li class="text-xs text-gray-400 flex items-center"><i class="fas fa-check text-clean-teal mr-2"></i> Will County</li>
+                        <li class="text-xs text-gray-400 flex items-center"><i class="fas fa-check text-clean-teal mr-2"></i> Heritage District</li>
+                    </ul>
+                    <a href="#contact" class="text-clean-blue font-bold text-sm flex items-center group-hover:underline">
+                        Book in Lockport <i class="fas fa-chevron-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Joliet -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group">
+                    <div class="w-16 h-16 bg-blue-50 text-clean-blue rounded-2xl flex items-center justify-center mb-6 group-hover:bg-clean-blue group-hover:text-white transition-colors">
+                        <i class="fas fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-clean-dark mb-3">Joliet</h3>
+                    <p class="text-gray-500 text-sm mb-6">High-quality commercial cleaning and janitorial services across Joliet.</p>
+                    <ul class="space-y-2 mb-8">
+                        <li class="text-xs text-gray-400 flex items-center"><i class="fas fa-check text-clean-teal mr-2"></i> Joliet Metro</li>
+                        <li class="text-xs text-gray-400 flex items-center"><i class="fas fa-check text-clean-teal mr-2"></i> Industrial Parks</li>
+                    </ul>
+                    <a href="#contact" class="text-clean-blue font-bold text-sm flex items-center group-hover:underline">
+                        Book in Joliet <i class="fas fa-chevron-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <div class="inline-flex items-center p-1 bg-white rounded-full shadow-inner border border-gray-100">
+                    <span class="px-6 py-2 text-sm font-bold text-clean-blue">Trusted by 50+ Local Clients</span>
+                    <a href="#contact" class="bg-clean-blue text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-blue-800 transition-colors">Check Availability</a>
+                </div>
             </div>
         </div>
     </section>
@@ -576,29 +730,46 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-16 bg-white">
+    <section id="reviews" class="py-24 bg-white reveal">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Building Our Reputation</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">As a new business, we're excited to serve our community and build lasting relationships with our customers.</p>
+            <div class="flex flex-col lg:flex-row justify-between items-end mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Customer Stories</h2>
+                    <p class="text-gray-600 text-lg">We pride ourselves on 5-star service. Here is what our neighbors in Valparaiso and Joliet have to say.</p>
+                </div>
+                <button onclick="openReviewModal()" class="bg-clean-teal text-white font-bold py-3 px-8 rounded-xl hover:bg-teal-600 transition-all shadow-md flex items-center">
+                    <i class="fas fa-pen-nib mr-2"></i> Leave a Review
+                </button>
             </div>
             
-            <div class="max-w-4xl mx-auto bg-clean-light p-8 rounded-xl border border-gray-200">
-                <div class="text-center">
-                    <div class="text-clean-blue text-5xl mb-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-xl italic mb-6">"Our goal is to treat every home and office as if it were our own. Perfection isn't just a goal; it's our standard."</p>
-                    <div class="font-bold text-lg">- Bill, Owner</div>
-                    <p class="text-gray-600 mt-2">Bill's Cleaning Service</p>
-                </div>
+            <div id="reviews-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Reviews will be rendered here -->
             </div>
         </div>
     </section>
+
+    <!-- Review Modal (Reactive) -->
+    <div id="review-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-[100] hidden backdrop-blur-sm">
+        <div class="bg-white rounded-3xl p-8 max-w-lg w-full mx-4 shadow-2xl transform transition-all">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-clean-dark">Write a Review</h3>
+                <button onclick="closeReviewModal()" class="text-gray-400 hover:text-gray-600"><i class="fas fa-times text-xl"></i></button>
+            </div>
+            <form id="review-form" onsubmit="handleReviewSubmit(event)" class="space-y-4">
+                <div class="flex space-x-2 justify-center mb-6" id="star-rating">
+                    <i class="fas fa-star text-3xl cursor-pointer text-gray-300 hover:text-yellow-400 star-btn" onclick="setRating(1)"></i>
+                    <i class="fas fa-star text-3xl cursor-pointer text-gray-300 hover:text-yellow-400 star-btn" onclick="setRating(2)"></i>
+                    <i class="fas fa-star text-3xl cursor-pointer text-gray-300 hover:text-yellow-400 star-btn" onclick="setRating(3)"></i>
+                    <i class="fas fa-star text-3xl cursor-pointer text-gray-300 hover:text-yellow-400 star-btn" onclick="setRating(4)"></i>
+                    <i class="fas fa-star text-3xl cursor-pointer text-gray-300 hover:text-yellow-400 star-btn" onclick="setRating(5)"></i>
+                </div>
+                <input type="text" id="rev-name" placeholder="Your Name" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-clean-blue outline-none">
+                <input type="text" id="rev-location" placeholder="City (e.g. Lockport)" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-clean-blue outline-none">
+                <textarea id="rev-text" placeholder="Share your experience..." required rows="4" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-clean-blue outline-none"></textarea>
+                <button type="submit" class="w-full bg-clean-blue text-white font-bold py-4 rounded-xl hover:bg-blue-800 transition-all shadow-lg">Post Review</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-clean-dark text-white py-12">
@@ -684,6 +855,7 @@
             { "label": "How It Works", "href": "#how-it-works", "icon": "fas fa-tasks" },
             { "label": "Services", "href": "#services", "icon": "fas fa-broom" },
             { "label": "Gallery", "href": "#gallery", "icon": "fas fa-images" },
+            { "label": "Reviews", "href": "#reviews", "icon": "fas fa-star" },
             { "label": "FAQ", "href": "#faq", "icon": "fas fa-question-circle" },
             { "label": "Contact", "href": "#contact", "icon": "fas fa-phone-alt" }
         ];
@@ -816,8 +988,195 @@
             ).join("");
         }
 
+        // Checklist Data
+        const checklistData = {
+            standard: {
+                title: "Standard Cleaning",
+                items: [
+                    { category: "Kitchen", tasks: ["Counters & Sinks", "Stove Exterior", "Microwave Inside", "Trash Removal"] },
+                    { category: "Bathrooms", tasks: ["Toilet Sanitize", "Tub & Shower", "Mirrors & Chrome", "Floor Mopping"] },
+                    { category: "Living Areas", tasks: ["General Dusting", "Vacuuming", "Tidying Up", "High Touch Points"] }
+                ]
+            },
+            deep: {
+                title: "Deep Cleaning",
+                items: [
+                    { category: "Detailing", tasks: ["Baseboards", "Door Frames", "Light Switches", "Vents & Grills"] },
+                    { category: "Furniture", tasks: ["Cushion Vacuum", "Wood Polishing", "Behind/Under Items", "Window Sills"] },
+                    { category: "Heavy Scrub", tasks: ["Tile Grout", "Cabinet Exteriors", "Appliance Pull-outs", "Full Dusting"] }
+                ]
+            },
+            move: {
+                title: "Move In/Out",
+                items: [
+                    { category: "Empty Spaces", tasks: ["Inside Cabinets", "Inside Drawers", "Closet Shelving", "Wall Spotting"] },
+                    { category: "Full Prep", tasks: ["Oven Deep Clean", "Fridge Interior", "Full Window Tracks", "Floor Rejuvenation"] },
+                    { category: "Sanitize", tasks: ["Every Surface", "Deep Floor Scrub", "High Dusting", "Full Disinfection"] }
+                ]
+            },
+            office: {
+                title: "Office Cleaning",
+                items: [
+                    { category: "Workspace", tasks: ["Desk Sanitizing", "Keyboard Dusting", "Trash & Recycle", "Glass Partitions"] },
+                    { category: "Commons", tasks: ["Kitchenette", "Coffee Station", "Lounge Areas", "Entry Matting"] },
+                    { category: "Floor Care", tasks: ["Professional Vacuum", "Hard Floor Polish", "Stairwells", "Elevator Detail"] }
+                ]
+            }
+        };
+
+        // Reactive Functions
+        function updateChecklist(type) {
+            const container = document.getElementById('checklist-content');
+            const data = checklistData[type];
+
+            // Update tabs
+            document.querySelectorAll('.checklist-tab').forEach(tab => {
+                tab.classList.remove('bg-clean-blue', 'text-white', 'shadow-md');
+                tab.classList.add('text-clean-blue');
+            });
+            document.getElementById(`tab-${type}`).classList.add('bg-clean-blue', 'text-white', 'shadow-md');
+            document.getElementById(`tab-${type}`).classList.remove('text-clean-blue');
+
+            // Fade out
+            container.style.opacity = '0';
+
+            setTimeout(() => {
+                container.innerHTML = data.items.map(group => `
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h4 class="font-bold text-clean-blue mb-4 border-b pb-2">${group.category}</h4>
+                        <ul class="space-y-3">
+                            ${group.tasks.map(task => `
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-clean-teal mr-3"></i> ${task}
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `).join('');
+                container.style.opacity = '1';
+            }, 300);
+        }
+
+        let roomCount = 2;
+        let calcLevel = 'standard';
+
+        function adjustRooms(delta) {
+            roomCount = Math.max(1, Math.min(8, roomCount + delta));
+            document.getElementById('room-count').innerText = roomCount;
+            calculateTotal();
+        }
+
+        function setCalcLevel(level) {
+            calcLevel = level;
+            document.querySelectorAll('.calc-level-btn').forEach(btn => {
+                btn.classList.remove('bg-clean-blue', 'border-clean-blue');
+                btn.classList.add('border-gray-700');
+            });
+            document.getElementById(`calc-${level}`).classList.add('bg-clean-blue', 'border-clean-blue');
+            document.getElementById(`calc-${level}`).classList.remove('border-gray-700');
+            calculateTotal();
+        }
+
+        // Review Data
+        let reviews = [
+            { name: "Sarah M.", location: "Valparaiso", rating: 5, text: "Bill and his team are phenomenal! My house has never smelled so fresh. They missed nothing.", date: "2 days ago" },
+            { name: "James K.", location: "Lockport", rating: 5, text: "Excellent communication and the deep clean was worth every penny. Very professional equipment.", date: "1 week ago" },
+            { name: "Elena R.", location: "Chicago", rating: 5, text: "Reliable and thorough. I've tried many services, but Bill's attention to detail is unmatched.", date: "2 weeks ago" }
+        ];
+
+        function renderReviews() {
+            const container = document.getElementById('reviews-container');
+            container.innerHTML = reviews.map(rev => `
+                <div class="bg-clean-light p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all group">
+                    <div class="text-yellow-400 mb-4">
+                        ${Array(rev.rating).fill('<i class="fas fa-star"></i>').join('')}
+                    </div>
+                    <p class="text-gray-700 italic mb-6 leading-relaxed">"${rev.text}"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-clean-blue text-white rounded-full flex items-center justify-center font-bold mr-4">
+                            ${rev.name.charAt(0)}
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-clean-dark">${rev.name}</h4>
+                            <p class="text-xs text-gray-500">${rev.location} • ${rev.date}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        let selectedRating = 0;
+        function setRating(rating) {
+            selectedRating = rating;
+            const stars = document.querySelectorAll('.star-btn');
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('text-yellow-400');
+                    star.classList.remove('text-gray-300');
+                } else {
+                    star.classList.remove('text-yellow-400');
+                    star.classList.add('text-gray-300');
+                }
+            });
+        }
+
+        function openReviewModal() {
+            document.getElementById('review-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeReviewModal() {
+            document.getElementById('review-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleReviewSubmit(e) {
+            e.preventDefault();
+            if (selectedRating === 0) {
+                alert("Please select a star rating!");
+                return;
+            }
+            const newReview = {
+                name: document.getElementById('rev-name').value,
+                location: document.getElementById('rev-location').value,
+                text: document.getElementById('rev-text').value,
+                rating: selectedRating,
+                date: "Just now"
+            };
+            reviews.unshift(newReview);
+            renderReviews();
+            closeReviewModal();
+            document.getElementById('review-form').reset();
+            setRating(0);
+        }
+
+        function calculateTotal() {
+            const base = 80;
+            const perRoom = 20;
+            const deepMultiplier = 1.5;
+
+            let total = base + (roomCount * perRoom);
+            if (calcLevel === 'deep') total *= deepMultiplier;
+
+            document.getElementById('total-estimate').innerText = Math.round(total);
+        }
+
         // Initialize page content
         document.addEventListener("DOMContentLoaded", function() {
+            // Initial Data
+            updateChecklist('standard');
+            renderReviews();
+
+            // Comparison Slider Logic
+            const slider = document.getElementById('comparison-slider');
+            if (slider) {
+                slider.addEventListener('input', (e) => {
+                    const val = e.target.value;
+                    document.getElementById('before-image').style.width = `${val}%`;
+                    document.getElementById('slider-line').style.left = `${val}%`;
+                });
+            }
+
             // Set current year
             document.getElementById("current-year").textContent = new Date().getFullYear();
             
