@@ -1,892 +1,776 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <base target="_self">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bill's Cleaning Service | Professional Cleaning Solutions</title>
-    <meta name="description" content="Professional cleaning services for homes and offices. Call Bill's Cleaning Service at 779-390-4663 for a free quote.">
-    <meta name="keywords" content="cleaning service, professional cleaning, house cleaning, office cleaning, Bill's Cleaning Service">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Bill's Cleaning Service | Premium Cleaning Redefined</title>
+    <meta name="description" content="Elite cleaning services for discerning homes and offices. Experience the Bill's difference.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'clean-blue': '#1e40af',
-                        'clean-teal': '#0d9488',
-                        'clean-light': '#f8fafc',
-                        'clean-dark': '#1e293b'
+                        'brand-orange': '#f97316',
+                        'brand-dark': '#0f172a',
+                        'brand-surface': '#1e293b',
+                        'brand-accent': '#fb923c'
                     },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    boxShadow: {
+                        'orange-glow': '0 0 20px rgba(249, 115, 22, 0.3)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: 1, transform: 'scale(1)' },
+                            '50%': { opacity: .7, transform: 'scale(1.05)' },
+                        }
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
         }
-        .hero-bg {
-            background: linear-gradient(rgba(30, 64, 175, 0.75), rgba(30, 64, 175, 0.8)), url('images/IMG_3494.jpeg');
-            background-size: cover;
-            background-position: center;
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
-        .phone-pulse {
-            animation: pulse 2s infinite;
+        .glass-nav {
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(30, 64, 175, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(30, 64, 175, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(30, 64, 175, 0); }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.15), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(30, 64, 175, 0.1), transparent 40%);
+        }
+        .orange-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        input:focus, select:focus, textarea:focus {
+            box-shadow: 0 0 0 2px #f97316;
+            outline: none;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #f97316;
         }
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-clean-light">
+<body class="custom-scrollbar">
     <!-- Promotional Banner -->
-    <div class="bg-clean-teal text-white py-2 text-center text-sm font-medium sticky top-0 z-[60]">
-        <i class="fas fa-tags mr-2"></i>New Customer Special: <span class="font-bold underline">20% OFF</span> your first cleaning! Mention "WEB20"
+    <div class="bg-brand-orange text-white py-2 text-center text-xs font-bold tracking-widest uppercase sticky top-0 z-[70]">
+        Limited Time: Mention "DARK25" for 25% off first deep clean
     </div>
 
-    <!-- Header & Navigation -->
-    <header class="sticky top-[36px] z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                    <div class="bg-clean-blue text-white p-2 rounded-lg">
-                        <i class="fas fa-broom text-xl"></i>
-                    </div>
-                    <div>
-                        <h1 class="text-xl font-bold text-clean-dark">Bill's Cleaning Service</h1>
-                        <p class="text-xs text-gray-600">Professional Cleaning Solutions</p>
-                    </div>
+    <!-- Navigation -->
+    <nav class="glass-nav sticky top-[32px] z-[60] py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="bg-brand-orange p-2 rounded-xl group-hover:rotate-12 transition-transform shadow-orange-glow">
+                    <i class="fas fa-sparkles text-white text-xl"></i>
                 </div>
-                
-                <nav class="hidden md:block">
-                    <ul id="nav-list" class="flex space-x-8"></ul>
-                </nav>
-                
-                <div class="flex items-center space-x-4">
-                    <a href="tel:779-390-4663" class="bg-clean-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-800 transition-colors phone-pulse">
-                        <i class="fas fa-phone-alt mr-2"></i>779-390-4663
-                    </a>
-                    <button id="mobile-menu-btn" class="md:hidden text-clean-dark text-2xl">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
+                <span class="text-xl font-extrabold tracking-tight">BILL'S <span class="text-brand-orange">CLEANING</span></span>
+            </a>
             
-            <!-- Mobile Navigation -->
-            <div id="mobile-nav" class="hidden md:hidden mt-4 pb-2 border-t pt-4">
-                <ul id="mobile-nav-list" class="space-y-3"></ul>
+            <div class="hidden lg:flex items-center space-x-10 text-sm font-semibold text-gray-400">
+                <a href="#home" class="hover:text-brand-orange transition-colors">Home</a>
+                <a href="#process" class="hover:text-brand-orange transition-colors">Process</a>
+                <a href="#services" class="hover:text-brand-orange transition-colors">Services</a>
+                <a href="#faq" class="hover:text-brand-orange transition-colors">FAQ</a>
+                <a href="#contact" class="bg-white text-black px-6 py-2.5 rounded-full hover:bg-brand-orange hover:text-white transition-all shadow-lg">Get Started</a>
             </div>
+
+            <button id="menu-toggle" class="lg:hidden text-white text-2xl">
+                <i class="fas fa-bars-staggered"></i>
+            </button>
         </div>
-    </header>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark z-[100] flex flex-col items-center justify-center space-y-8 text-2xl font-bold hidden">
+        <button id="menu-close" class="absolute top-8 right-8 text-4xl text-gray-500 hover:text-brand-orange">&times;</button>
+        <a href="#home" class="hover:text-brand-orange">Home</a>
+        <a href="#process" class="hover:text-brand-orange">Process</a>
+        <a href="#services" class="hover:text-brand-orange">Services</a>
+        <a href="#faq" class="hover:text-brand-orange">FAQ</a>
+        <a href="#contact" class="text-brand-orange">Book Now</a>
+    </div>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg text-white py-16 md:py-24">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Sparkling Clean Spaces, Every Time</h2>
-                <p class="text-xl mb-8 opacity-90">Professional cleaning services for homes and offices. We deliver exceptional results with attention to detail and eco-friendly products.</p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contact" class="bg-white text-clean-blue font-bold py-3 px-8 rounded-lg text-center hover:bg-gray-100 transition-colors">
-                        <i class="fas fa-calendar-check mr-2"></i>Book a Free Estimate
+    <header id="home" class="relative min-h-[90vh] flex items-center overflow-hidden hero-gradient">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="reveal">
+                <div class="inline-flex items-center space-x-2 bg-brand-surface border border-white/10 px-4 py-2 rounded-full mb-8">
+                    <span class="flex h-2 w-2 rounded-full bg-brand-orange animate-ping"></span>
+                    <span class="text-xs font-bold text-gray-300 uppercase tracking-widest">Premium cleaning in Joliet & Beyond</span>
+                </div>
+                <h1 class="text-6xl lg:text-8xl font-black mb-6 leading-[1.1]">Luxury Care. <br><span class="text-brand-orange">Brighter</span> Living.</h1>
+                <p class="text-gray-400 text-xl mb-10 max-w-lg leading-relaxed">
+                    Elevating the standard of home and office maintenance. We combine high-performance equipment with eco-conscious practices for an elite clean.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <a href="#contact" class="bg-brand-orange text-white px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 hover:shadow-orange-glow transition-all flex items-center justify-center">
+                        Instant Quote <i class="fas fa-arrow-right ml-3 text-sm"></i>
                     </a>
-                    <a href="tel:779-390-4663" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg text-center hover:bg-white hover:text-clean-blue transition-colors">
-                        <i class="fas fa-phone-alt mr-2"></i>Call Now: 779-390-4663
+                    <a href="tel:779-390-4663" class="bg-white/5 border border-white/10 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-3 text-brand-orange"></i> 779-390-4663
                     </a>
                 </div>
             </div>
+            <div class="relative lg:block hidden reveal" style="transition-delay: 200ms;">
+                <div class="relative z-10 rounded-[3rem] overflow-hidden border-[12px] border-white/5 shadow-2xl animate-float">
+                    <img src="images/IMG_3494.jpeg" alt="Elite Interior" class="w-full object-cover aspect-[4/5]">
+                </div>
+                <!-- Float elements -->
+                <div class="absolute -top-10 -right-10 bg-brand-orange p-8 rounded-3xl shadow-orange-glow reveal" style="transition-delay: 500ms;">
+                    <p class="text-4xl font-black">100%</p>
+                    <p class="text-xs font-bold uppercase tracking-tighter opacity-80 leading-none">Satisfaction<br>Guaranteed</p>
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-brand-surface border border-white/10 p-6 rounded-3xl reveal" style="transition-delay: 700ms;">
+                    <div class="flex items-center space-x-3">
+                        <div class="flex -space-x-2">
+                            <div class="w-10 h-10 rounded-full border-2 border-brand-surface bg-gray-500"></div>
+                            <div class="w-10 h-10 rounded-full border-2 border-brand-surface bg-gray-600"></div>
+                            <div class="w-10 h-10 rounded-full border-2 border-brand-surface bg-gray-700"></div>
+                        </div>
+                        <p class="text-xs font-bold"><span class="text-brand-orange">500+</span> Cleaned</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+        <!-- Background decor -->
+        <div class="absolute top-1/2 left-0 w-96 h-96 bg-brand-orange/10 blur-[120px] -translate-y-1/2 -translate-x-1/2"></div>
+    </header>
 
     <!-- How It Works -->
-    <section id="how-it-works" class="py-16 bg-clean-light">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">How It Works</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Getting your home or office professionally cleaned has never been easier. Follow our simple three-step process.</p>
+    <section id="process" class="py-32 bg-brand-dark reveal border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-brand-orange font-black uppercase tracking-widest text-sm mb-4">The Protocol</h2>
+                <h3 class="text-5xl lg:text-6xl font-extrabold mb-6">Pristine in 3 Steps.</h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
                 <!-- Step 1 -->
-                <div class="text-center relative z-10">
-                    <div class="w-20 h-20 bg-clean-blue text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">1</div>
-                    <h3 class="text-xl font-bold mb-3">Book Your Service</h3>
-                    <p class="text-gray-600">Give us a call or fill out our online form for a free estimate. We'll discuss your needs and schedule a convenient time.</p>
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 bg-brand-surface border border-white/10 rounded-[2rem] flex items-center justify-center text-4xl font-black text-brand-orange mx-auto mb-8 shadow-2xl">1</div>
+                    <h4 class="text-2xl font-bold mb-4">Digital Inquiry</h4>
+                    <p class="text-gray-500 leading-relaxed">Submit your project details via our reactive form or direct line for an instant consultation.</p>
                 </div>
-
                 <!-- Step 2 -->
-                <div class="text-center relative z-10">
-                    <div class="w-20 h-20 bg-clean-blue text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">2</div>
-                    <h3 class="text-xl font-bold mb-3">Professional Cleaning</h3>
-                    <p class="text-gray-600">Our experienced team arrives with all necessary supplies to provide a thorough, high-quality clean tailored to your space.</p>
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 bg-brand-orange rounded-[2rem] flex items-center justify-center text-4xl font-black text-white mx-auto mb-8 shadow-orange-glow">2</div>
+                    <h4 class="text-2xl font-bold mb-4">Precision Clean</h4>
+                    <p class="text-gray-500 leading-relaxed">Bill's expert team arrives with elite equipment to execute your customized cleaning plan.</p>
                 </div>
-
                 <!-- Step 3 -->
-                <div class="text-center relative z-10">
-                    <div class="w-20 h-20 bg-clean-blue text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">3</div>
-                    <h3 class="text-xl font-bold mb-3">Enjoy Your Space</h3>
-                    <p class="text-gray-600">Walk into a sparkling clean environment and enjoy the peace of mind that comes with a professionally cleaned space.</p>
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 bg-brand-surface border border-white/10 rounded-[2rem] flex items-center justify-center text-4xl font-black text-brand-orange mx-auto mb-8 shadow-2xl">3</div>
+                    <h4 class="text-2xl font-bold mb-4">Elite Handover</h4>
+                    <p class="text-gray-500 leading-relaxed">Step into a redefined environment. We ensure 100% satisfaction before finalizing the project.</p>
                 </div>
 
-                <!-- Connecting Line (hidden on mobile) -->
-                <div class="hidden md:block absolute top-10 left-1/4 right-1/4 h-1 bg-blue-200 -z-0"></div>
+                <!-- Connecting lines -->
+                <div class="hidden md:block absolute top-12 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Our Cleaning Services</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">We offer comprehensive cleaning solutions tailored to your needs. As a new business, we're committed to exceeding your expectations with every service.</p>
-            </div>
-            
-            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
-
-            <!-- Service Checklist Toggle -->
-            <div class="max-w-4xl mx-auto bg-clean-light rounded-2xl p-8 border border-gray-200">
-                <h3 class="text-2xl font-bold text-clean-dark text-center mb-8">What's Included in Our Cleaning?</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <!-- Trust Stats Ticker -->
+    <section class="py-12 bg-brand-surface border-y border-white/5 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between gap-12 lg:gap-0">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-shield-heart text-3xl text-brand-orange"></i>
                     <div>
-                        <h4 class="text-xl font-bold text-clean-blue mb-4 flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i>Standard Clean
-                        </h4>
-                        <ul class="space-y-3">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Dusting all reachable surfaces</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Vacuuming & mopping all floors</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Sanitizing bathrooms (toilet, tub, mirror)</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Kitchen exterior cleaning (stove, counters)</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Emptying trash bins</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-clean-teal mb-4 flex items-center">
-                            <i class="fas fa-plus-circle mr-2"></i>Deep Clean (Plus Everything in Standard)
-                        </h4>
-                        <ul class="space-y-3">
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Detailing baseboards & door frames</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Cleaning behind/under light appliances</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Wiping window sills & tracks</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Deep scrubbing tile & grout</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Dusting ceiling fans & vents</li>
-                        </ul>
+                        <p class="text-2xl font-bold">Licensed & Insured</p>
+                        <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">Peace of mind guaranteed</p>
                     </div>
                 </div>
-                <div class="text-center mt-10">
-                    <p class="text-gray-600 mb-4 italic">Custom checklists available for Move In/Out and Commercial jobs.</p>
-                    <a href="#contact" class="text-clean-blue font-bold hover:underline">Get a detailed quote for your project <i class="fas fa-arrow-right ml-1"></i></a>
+                <div class="flex items-center space-x-4 border-l border-white/10 pl-12">
+                    <i class="fas fa-check-double text-3xl text-brand-orange"></i>
+                    <div>
+                        <p class="text-2xl font-bold">500+ Projects</p>
+                        <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">Completed in 2024</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4 border-l border-white/10 pl-12">
+                    <i class="fas fa-leaf text-3xl text-green-500"></i>
+                    <div>
+                        <p class="text-2xl font-bold">Eco-Certified</p>
+                        <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">Safe for pets & kids</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4 border-l border-white/10 pl-12">
+                    <i class="fas fa-star text-3xl text-yellow-400"></i>
+                    <div>
+                        <p class="text-2xl font-bold">5.0 Star Rated</p>
+                        <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">Verified local reviews</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Promise Section -->
-    <section class="py-16 bg-clean-dark text-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <!-- Services Grid -->
+    <section id="services" class="py-32 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
+                <div class="reveal">
+                    <h2 class="text-brand-orange font-black uppercase tracking-widest text-sm mb-4">The Collection</h2>
+                    <h3 class="text-5xl lg:text-6xl font-extrabold">Elite Services.</h3>
+                </div>
+                <p class="text-gray-400 max-w-md text-lg reveal" style="transition-delay: 200ms;">
+                    Meticulous attention to detail in every service we provide. From residential havens to commercial centers.
+                </p>
+            </div>
+
+            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Services injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Reactive Calculator -->
+    <section class="py-32 bg-brand-surface relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-6xl mx-auto bg-brand-dark rounded-[4rem] overflow-hidden shadow-2xl border border-white/5 reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="p-12 lg:p-20">
+                        <h3 class="text-4xl font-bold mb-8">Ready to shine?</h3>
+                        <p class="text-gray-400 mb-12">Tailor your estimate in seconds with our reactive booking tool.</p>
+
+                        <div class="space-y-10">
+                            <div>
+                                <label class="block text-sm font-black text-gray-500 uppercase tracking-widest mb-6">Property Size</label>
+                                <div class="flex items-center space-x-8">
+                                    <button onclick="adjustRooms(-1)" class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 hover:bg-brand-orange transition-all text-2xl">-</button>
+                                    <span class="text-5xl font-black text-brand-orange"><span id="room-count">2</span> BR</span>
+                                    <button onclick="adjustRooms(1)" class="w-16 h-16 rounded-2xl bg-brand-orange shadow-orange-glow text-2xl">+</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-black text-gray-500 uppercase tracking-widest mb-6">Service Intensity</label>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <button onclick="setCalcLevel('standard')" id="calc-standard" class="calc-btn p-5 rounded-2xl border-2 border-brand-orange bg-brand-orange font-bold transition-all">Standard</button>
+                                    <button onclick="setCalcLevel('deep')" id="calc-deep" class="calc-btn p-5 rounded-2xl border-2 border-white/10 font-bold transition-all hover:border-brand-orange">Deep Clean</button>
+                                </div>
+                            </div>
+
+                            <div class="pt-10 border-t border-white/5 flex justify-between items-center">
+                                <div>
+                                    <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Est. Starting Total</p>
+                                    <p class="text-6xl font-black text-white">$<span id="total-estimate">130</span></p>
+                                </div>
+                                <a href="#contact" class="bg-white text-black px-10 py-5 rounded-2xl font-bold hover:bg-brand-orange hover:text-white transition-all">Book Today</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block relative">
+                        <img src="images/IMG_2395.jpeg" alt="Service" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/20 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Proof (Comparison) -->
+    <section id="results" class="py-32">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-brand-orange font-black uppercase tracking-widest text-sm mb-4">Visible Results</h2>
+                <h3 class="text-5xl lg:text-6xl font-extrabold mb-6">Seeing is Believing.</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto">Use the slider below to see how we transform cluttered and dusty spaces into pristine environments.</p>
+            </div>
+
+            <div class="max-w-5xl mx-auto reveal" style="transition-delay: 200ms;">
+                <div class="relative group rounded-[3rem] overflow-hidden border-[16px] border-white/5 shadow-2xl aspect-video">
+                    <img src="images/IMG_3494.jpeg" alt="After" class="absolute inset-0 w-full h-full object-cover">
+                    <div id="before-mask" class="absolute inset-0 w-1/2 overflow-hidden border-r-4 border-brand-orange z-10">
+                        <img src="images/IMG_3494.jpeg" alt="Before" class="absolute inset-0 w-[1200px] max-w-none h-full object-cover grayscale brightness-[0.4] saturate-0">
+                    </div>
+                    <input type="range" min="0" max="100" value="50" id="diff-slider" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30">
+                    <div id="slider-handle" class="absolute top-0 bottom-0 left-1/2 w-0 z-20 pointer-events-none">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-orange-glow">
+                            <i class="fas fa-left-right text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-10 left-10 text-xs font-black uppercase tracking-[0.2em] bg-black/50 backdrop-blur px-5 py-2 rounded-full z-20">Raw Reality</div>
+                    <div class="absolute bottom-10 right-10 text-xs font-black uppercase tracking-[0.2em] bg-brand-orange px-5 py-2 rounded-full z-20">Bill's Standard</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="py-32 bg-brand-surface/50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-1 reveal">
+                    <h3 class="text-4xl font-black mb-6">Regions of <br><span class="text-brand-orange">Service</span></h3>
+                    <p class="text-gray-400 leading-relaxed mb-8">We bring elite cleaning standards to the heart of Northwest Indiana and the Chicago metro.</p>
+                </div>
+                <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-brand-surface p-8 rounded-3xl border border-white/5 hover:border-brand-orange/30 transition-all reveal" style="transition-delay: 100ms;">
+                        <h4 class="text-xl font-bold mb-4">Valparaiso</h4>
+                        <p class="text-sm text-gray-500">Porter County's preferred residential cleaning partner.</p>
+                    </div>
+                    <div class="bg-brand-surface p-8 rounded-3xl border border-white/5 hover:border-brand-orange/30 transition-all reveal" style="transition-delay: 200ms;">
+                        <h4 class="text-xl font-bold mb-4">Chicago</h4>
+                        <p class="text-sm text-gray-500">Dynamic office and commercial care across the city.</p>
+                    </div>
+                    <div class="bg-brand-surface p-8 rounded-3xl border border-white/5 hover:border-brand-orange/30 transition-all reveal" style="transition-delay: 300ms;">
+                        <h4 class="text-xl font-bold mb-4">Lockport</h4>
+                        <p class="text-sm text-gray-500">Meticulous home maintenance for Will County families.</p>
+                    </div>
+                    <div class="bg-brand-surface p-8 rounded-3xl border border-white/5 hover:border-brand-orange/30 transition-all reveal" style="transition-delay: 400ms;">
+                        <h4 class="text-xl font-bold mb-4">Joliet</h4>
+                        <p class="text-sm text-gray-500">Scalable janitorial solutions for Joliet's businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-32 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-20 reveal">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Promise to You</h2>
-                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
-                        At Bill's Cleaning Service, we believe a clean home is a happy home. We are committed to two core pillars that define our business:
-                    </p>
-
-                    <div class="space-y-8">
-                        <div class="flex items-start">
-                            <div class="bg-clean-teal text-white p-4 rounded-xl mr-6">
-                                <i class="fas fa-shield-alt text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">100% Satisfaction Guarantee</h3>
-                                <p class="text-gray-400">If you're not completely happy with any part of our service, notify us within 24 hours and we'll return to make it right at no extra cost.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="bg-green-600 text-white p-4 rounded-xl mr-6">
-                                <i class="fas fa-leaf text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">Eco-Friendly & Safe Products</h3>
-                                <p class="text-gray-400">We prioritize the health of your family and pets. We use non-toxic, biodegradable products that are tough on dirt but gentle on your environment.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h2 class="text-brand-orange font-black uppercase tracking-widest text-sm mb-4">Neighbor Reviews</h2>
+                    <h3 class="text-5xl lg:text-6xl font-extrabold">The Verdict.</h3>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-white bg-opacity-5 p-8 rounded-2xl text-center border border-white border-opacity-10">
-                        <div class="text-clean-teal text-4xl mb-4"><i class="fas fa-user-check"></i></div>
-                        <h4 class="font-bold text-lg">Fully Insured</h4>
-                        <p class="text-sm text-gray-400 mt-2">Peace of mind for your property.</p>
-                    </div>
-                    <div class="bg-white bg-opacity-5 p-8 rounded-2xl text-center border border-white border-opacity-10">
-                        <div class="text-clean-teal text-4xl mb-4"><i class="fas fa-award"></i></div>
-                        <h4 class="font-bold text-lg">Top Rated</h4>
-                        <p class="text-sm text-gray-400 mt-2">Committed to excellence.</p>
-                    </div>
-                    <div class="bg-white bg-opacity-5 p-8 rounded-2xl text-center border border-white border-opacity-10">
-                        <div class="text-clean-teal text-4xl mb-4"><i class="fas fa-hand-holding-heart"></i></div>
-                        <h4 class="font-bold text-lg">Local Care</h4>
-                        <p class="text-sm text-gray-400 mt-2">Supporting our community.</p>
-                    </div>
-                    <div class="bg-white bg-opacity-5 p-8 rounded-2xl text-center border border-white border-opacity-10">
-                        <div class="text-clean-teal text-4xl mb-4"><i class="fas fa-clock"></i></div>
-                        <h4 class="font-bold text-lg">On-Time</h4>
-                        <p class="text-sm text-gray-400 mt-2">Respecting your busy schedule.</p>
-                    </div>
-                </div>
+                <button onclick="openModal('review')" class="hidden lg:flex items-center text-brand-orange font-bold hover:underline">
+                    Share Your Experience <i class="fas fa-plus-circle ml-3"></i>
+                </button>
+            </div>
+
+            <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Reviews injected by JS -->
             </div>
         </div>
+        <div class="absolute bottom-0 right-0 w-1/3 h-1/3 bg-brand-orange/5 blur-[120px]"></div>
     </section>
 
-    <!-- About & Why Choose Us -->
-    <section id="why-us" class="py-16 bg-clean-light">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-6">About Bill's Cleaning Service</h2>
-                    <p class="text-gray-600 mb-4 text-lg leading-relaxed">
-                        Founded by Bill, a local community member with a passion for excellence, Bill's Cleaning Service was born from a simple idea: provide high-quality cleaning that families and businesses can actually rely on.
-                    </p>
-                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
-                        As a new local business, we don't just see a "job"—we see an opportunity to make your life easier. We bring the focus, the right tools, and a commitment to making every corner of your space shine. When you hire us, you're not just getting a cleaner; you're getting a partner who cares about your environment.
-                    </p>
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-clean-blue text-white p-4 rounded-full">
-                            <i class="fas fa-quote-left text-2xl"></i>
-                        </div>
-                        <div>
-                            <p class="italic text-gray-700 font-medium">"My goal is to treat every home and office as if it were my own. Perfection isn't just a goal; it's our standard."</p>
-                            <p class="font-bold text-clean-dark mt-2">— Bill, Owner</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="images/IMG_2395.jpeg" alt="Bill's Cleaning Service Professional" class="rounded-2xl shadow-2xl w-full h-auto object-cover">
-                    <div class="absolute -bottom-6 -right-6 bg-clean-teal text-white p-8 rounded-2xl shadow-xl hidden md:block">
-                        <p class="text-4xl font-bold">100%</p>
-                        <p class="text-sm uppercase tracking-wider">Satisfaction<br>Guaranteed</p>
-                    </div>
-                </div>
+    <!-- Service Packages Section -->
+    <section id="packages" class="py-32 bg-brand-dark relative reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-brand-orange font-black uppercase tracking-widest text-sm mb-4">Pricing Strategy</h2>
+                <h3 class="text-5xl lg:text-6xl font-extrabold mb-6">Service Packages.</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto">Choose a plan that fits your lifestyle. Transparent pricing with no hidden fees.</p>
             </div>
 
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Why Choose Us?</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto text-lg">We differentiate ourselves through reliability, attention to detail, and a personal touch that larger companies often miss.</p>
-            </div>
-            
-            <div id="features-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Our Work in Action</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">See the quality and care we bring to every cleaning project.</p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="group overflow-hidden rounded-xl shadow-md h-80">
-                    <img src="images/IMG_3494.jpeg" alt="Deep cleaned living space" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Basic -->
+                <div class="bg-brand-surface p-10 rounded-[3rem] border border-white/5 hover:border-white/10 transition-all flex flex-col h-full group">
+                    <h4 class="text-xl font-bold mb-2">Standard Shine</h4>
+                    <p class="text-gray-500 text-sm mb-8">Perfect for busy professionals.</p>
+                    <div class="text-4xl font-black mb-10">$80<span class="text-sm text-gray-500 font-normal"> / starting</span></div>
+                    <ul class="space-y-4 mb-12 flex-grow">
+                        <li class="flex items-center text-sm text-gray-400"><i class="fas fa-check text-brand-orange mr-3"></i> All Living Areas</li>
+                        <li class="flex items-center text-sm text-gray-400"><i class="fas fa-check text-brand-orange mr-3"></i> Kitchen Exterior</li>
+                        <li class="flex items-center text-sm text-gray-400"><i class="fas fa-check text-brand-orange mr-3"></i> Bathroom Sanitize</li>
+                        <li class="flex items-center text-sm text-gray-400"><i class="fas fa-check text-brand-orange mr-3"></i> Trash Removal</li>
+                    </ul>
+                    <a href="#contact" class="w-full py-4 rounded-2xl border border-white/10 text-center font-bold hover:bg-white hover:text-black transition-all">Select Plan</a>
                 </div>
-                <div class="group overflow-hidden rounded-xl shadow-md h-80">
-                    <img src="images/IMG_3331.jpeg" alt="Residential floor cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="group overflow-hidden rounded-xl shadow-md h-80">
-                    <img src="images/IMG_4314.jpeg" alt="Commercial kitchen cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="group overflow-hidden rounded-xl shadow-md h-80">
-                    <img src="images/IMG_2395.jpeg" alt="Professional cleaning equipment" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="group overflow-hidden rounded-xl shadow-md h-80">
-                    <img src="images/IMG_0299.jpeg" alt="Cleaning in progress" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="group overflow-hidden rounded-xl shadow-md h-80">
-                    <img src="images/IMG_7972.jpeg" alt="Detail cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Service Area Section -->
-    <section id="service-area" class="py-16 bg-clean-light">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Our Service Area</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto mb-10">We proudly serve the following communities and surrounding areas. Not sure if we cover your location? Give us a call!</p>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-semibold text-clean-blue">Valparaiso</div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-semibold text-clean-blue">Chicago</div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-semibold text-clean-blue">Lockport</div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-semibold text-clean-blue">Joliet</div>
-            </div>
-
-            <div class="mt-12">
-                <p class="text-clean-dark font-medium mb-4">Residential & Commercial Cleaning available in all listed areas.</p>
-                <a href="#contact" class="inline-block bg-clean-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors">
-                    Check Your Location
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-clean-blue text-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Get Your Free Quote Today</h2>
-                    <p class="text-xl opacity-90">Contact us for a personalized cleaning plan and pricing</p>
+                <!-- Deep (Featured) -->
+                <div class="bg-brand-orange p-10 rounded-[3rem] shadow-orange-glow transform scale-105 relative z-10 flex flex-col h-full">
+                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full">Most Popular</div>
+                    <h4 class="text-xl font-bold mb-2 text-white">Elite Deep Clean</h4>
+                    <p class="text-white/70 text-sm mb-8">The complete transformation.</p>
+                    <div class="text-4xl font-black mb-10 text-white">$150<span class="text-sm text-white/60 font-normal"> / starting</span></div>
+                    <ul class="space-y-4 mb-12 flex-grow">
+                        <li class="flex items-center text-sm text-white"><i class="fas fa-check text-white mr-3"></i> Everything in Standard</li>
+                        <li class="flex items-center text-sm text-white"><i class="fas fa-plus text-white mr-3"></i> Baseboards & Frames</li>
+                        <li class="flex items-center text-sm text-white"><i class="fas fa-plus text-white mr-3"></i> Inside Light Appliances</li>
+                        <li class="flex items-center text-sm text-white"><i class="fas fa-plus text-white mr-3"></i> Vent & Fan Detailing</li>
+                    </ul>
+                    <a href="#contact" class="w-full py-4 rounded-2xl bg-white text-black text-center font-bold hover:bg-black hover:text-white transition-all">Book Elite Clean</a>
                 </div>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="bg-white text-clean-blue p-3 rounded-full mr-4">
-                                    <i class="fas fa-phone-alt text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg">Call Us</h4>
-                                    <a href="tel:779-390-4663" class="text-2xl font-bold hover:underline">779-390-4663</a>
-                                    <p class="opacity-90">Available 7 days a week, 8am-8pm</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-white text-clean-blue p-3 rounded-full mr-4">
-                                    <i class="fas fa-envelope text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg">Email Us</h4>
-                                    <a href="mailto:Billscleaningservice779@gmail.com" class="text-xl hover:underline">Billscleaningservice779@gmail.com</a>
-                                    <p class="opacity-90">We respond within 24 hours</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-white text-clean-blue p-3 rounded-full mr-4">
-                                    <i class="fas fa-map-marker-alt text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg">Service Area</h4>
-                                    <p class="text-xl">Valparaiso, Chicago, Lockport, Joliet</p>
-                                    <p class="opacity-90">Residential and commercial properties</p>
-                                </div>
-                            </div>
 
-                            <div class="flex items-start">
-                                <div class="bg-white text-clean-blue p-3 rounded-full mr-4">
-                                    <i class="fas fa-share-alt text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg">Follow Us</h4>
-                                    <div class="flex space-x-4 mt-2">
-                                        <a href="https://x.com/Billscleanser" target="_blank" class="hover:text-clean-teal transition-colors text-2xl">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                        <a href="https://www.instagram.com/Billscleaning779/" target="_blank" class="hover:text-clean-teal transition-colors text-2xl">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-10 bg-white bg-opacity-10 p-6 rounded-xl">
-                            <h4 class="font-bold text-xl mb-4">New Customer Special</h4>
-                            <p class="mb-4">As a new business, we're offering <span class="font-bold">20% off your first cleaning service</span> when you mention this website!</p>
-                            <p class="text-sm opacity-90">Offer valid for first-time customers only. Cannot be combined with other promotions.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl p-8 text-gray-800">
-                        <h3 class="text-2xl font-bold text-clean-dark mb-6">Request a Free Estimate</h3>
-                        <form id="contact-form" class="space-y-6">
-                            <div>
-                                <label for="name" class="block mb-2 font-medium">Full Name *</label>
-                                <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent">
-                            </div>
-                            
-                            <div>
-                                <label for="phone" class="block mb-2 font-medium">Phone Number *</label>
-                                <input type="tel" id="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent" placeholder="779-390-4663">
-                            </div>
-                            
-                            <div>
-                                <label for="email" class="block mb-2 font-medium">Email Address</label>
-                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent">
-                            </div>
-                            
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="service-type" class="block mb-2 font-medium">Service Type *</label>
-                                    <select id="service-type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent">
-                                        <option value="">Select a service</option>
-                                        <option value="residential">Residential Cleaning</option>
-                                        <option value="deep">Deep Cleaning</option>
-                                        <option value="move">Move In/Out Cleaning</option>
-                                        <option value="office">Office Cleaning</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="property-size" class="block mb-2 font-medium">Property Size (Approx.)</label>
-                                    <select id="property-size" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent">
-                                        <option value="">Select size</option>
-                                        <option value="studio">Studio / 1 BR</option>
-                                        <option value="medium">2-3 Bedrooms</option>
-                                        <option value="large">4+ Bedrooms</option>
-                                        <option value="office">Small Office</option>
-                                        <option value="commercial">Large Commercial</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="frequency" class="block mb-2 font-medium">Desired Frequency</label>
-                                    <select id="frequency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent">
-                                        <option value="one-time">One-time Clean</option>
-                                        <option value="weekly">Weekly</option>
-                                        <option value="bi-weekly">Bi-weekly</option>
-                                        <option value="monthly">Monthly</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="promo-code" class="block mb-2 font-medium">Promo Code</label>
-                                    <input type="text" id="promo-code" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent" placeholder="e.g. WEB20">
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <label for="message" class="block mb-2 font-medium">Additional Details</label>
-                                <textarea id="message" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clean-blue focus:border-transparent" placeholder="Number of bathrooms, pets, specific areas of focus, etc."></textarea>
-                            </div>
-                            
-                            <button type="submit" id="submit-btn" class="w-full bg-clean-blue text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors flex items-center justify-center">
-                                <span id="btn-text"><i class="fas fa-paper-plane mr-2"></i>Submit Request</span>
-                                <span id="btn-loader" class="hidden"><i class="fas fa-spinner fa-spin mr-2"></i>Sending...</span>
-                            </button>
-                            <p class="text-sm text-gray-600 text-center">We'll contact you within 24 hours to discuss your needs and provide a quote.</p>
-                        </form>
-                    </div>
+                <!-- Recurring -->
+                <div class="bg-brand-surface p-10 rounded-[3rem] border border-white/5 hover:border-white/10 transition-all flex flex-col h-full group">
+                    <h4 class="text-xl font-bold mb-2">Pristine Habit</h4>
+                    <p class="text-gray-500 text-sm mb-8">Weekly or Bi-weekly care.</p>
+                    <div class="text-4xl font-black mb-10 text-brand-orange">15% OFF<span class="text-sm text-gray-500 font-normal block mt-1">recurring services</span></div>
+                    <ul class="space-y-4 mb-12 flex-grow">
+                        <li class="flex items-center text-sm text-gray-400"><i class="fas fa-check text-brand-orange mr-3"></i> Consistent Schedule</li>
+                        <li class="flex items-center text-sm text-gray-400"><i class="fas fa-check text-brand-orange mr-3"></i> Dedicated Cleaner</li>
+                        <li class="flex items-center text-sm text-gray-400"><i class="fas fa-check text-brand-orange mr-3"></i> Priority Booking</li>
+                        <li class="flex items-center text-sm text-gray-400"><i class="fas fa-check text-brand-orange mr-3"></i> Loyalty Rewards</li>
+                    </ul>
+                    <a href="#contact" class="w-full py-4 rounded-2xl border border-white/10 text-center font-bold hover:bg-white hover:text-black transition-all">Get Quote</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-16 bg-clean-light">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Frequently Asked Questions</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Have questions? We have answers. If you don't see your question here, feel free to give us a call.</p>
+    <section id="faq" class="py-32 bg-brand-dark reveal border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-20">
+                <h2 class="text-brand-orange font-black uppercase tracking-widest text-sm mb-4">Common Inquiries</h2>
+                <h3 class="text-5xl font-extrabold">FAQ.</h3>
             </div>
 
-            <div class="max-w-3xl mx-auto space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-clean-dark">Do I need to be home during the cleaning?</span>
-                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+            <div class="space-y-4">
+                <div class="bg-brand-surface rounded-3xl border border-white/5 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-8 text-left flex justify-between items-center group">
+                        <span class="text-xl font-bold">Do I need to be present for the cleaning?</span>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-6 pb-4 text-gray-600">
-                        No, most of our customers are not home during their cleaning. You can provide us with a key, a door code, or leave a key in a secure location. We are fully insured for your peace of mind.
+                    <div class="faq-content hidden px-8 pb-8 text-gray-400 leading-relaxed">
+                        No. Most of our elite clients provide a key or secure access code. We are fully bonded and insured, ensuring total peace of mind for your property.
                     </div>
                 </div>
 
-                <!-- FAQ Item 2 -->
-                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-clean-dark">Do you provide the cleaning supplies?</span>
-                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                <div class="bg-brand-surface rounded-3xl border border-white/5 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-8 text-left flex justify-between items-center group">
+                        <span class="text-xl font-bold">What products do you use?</span>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-6 pb-4 text-gray-600">
-                        Yes, we bring all the necessary professional cleaning supplies and equipment. If you have specific products you'd prefer us to use, just let us know and we'll be happy to accommodate.
+                    <div class="faq-content hidden px-8 pb-8 text-gray-400 leading-relaxed">
+                        We exclusively use high-performance, eco-certified products that are non-toxic and safe for both pets and children. We bring all necessary equipment for every project.
                     </div>
                 </div>
 
-                <!-- FAQ Item 3 -->
-                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-clean-dark">Are you pet-friendly?</span>
-                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                <div class="bg-brand-surface rounded-3xl border border-white/5 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-8 text-left flex justify-between items-center group">
+                        <span class="text-xl font-bold">Is there a cancellation fee?</span>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-6 pb-4 text-gray-600">
-                        Absolutely! We love pets and use eco-friendly, non-toxic products that are safe for your furry friends. We just ask that you let us know if you have pets so we can be prepared.
-                    </div>
-                </div>
-
-                <!-- FAQ Item 4 -->
-                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-clean-dark">How do I pay for my service?</span>
-                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content hidden px-6 pb-4 text-gray-600">
-                        We accept various payment methods including credit/debit cards, Zelle, and cash. Payment is typically due upon completion of the service.
-                    </div>
-                </div>
-
-                <!-- FAQ Item 5 -->
-                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-clean-dark">What is your cancellation policy?</span>
-                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content hidden px-6 pb-4 text-gray-600">
-                        We understand that plans change. We request at least 24 hours notice for cancellations or rescheduling to avoid a cancellation fee.
+                    <div class="faq-content hidden px-8 pb-8 text-gray-400 leading-relaxed">
+                        We request a 24-hour notice for any schedule changes. Cancellations within 24 hours of the appointment may be subject to a nominal fee to support our dedicated staff.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials (Placeholder for future) -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-clean-dark mb-4">Building Our Reputation</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">As a new business, we're excited to start serving our community and building lasting relationships with our customers.</p>
+    <!-- Gallery section -->
+    <section class="py-32 bg-brand-dark">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="rounded-3xl overflow-hidden aspect-square reveal"><img src="images/IMG_0299.jpeg" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"></div>
+                <div class="rounded-3xl overflow-hidden aspect-square reveal" style="transition-delay: 100ms;"><img src="images/IMG_2395.jpeg" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"></div>
+                <div class="rounded-3xl overflow-hidden aspect-square reveal" style="transition-delay: 200ms;"><img src="images/IMG_3331.jpeg" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"></div>
+                <div class="rounded-3xl overflow-hidden aspect-square reveal" style="transition-delay: 300ms;"><img src="images/IMG_3494.jpeg" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"></div>
+                <div class="rounded-3xl overflow-hidden aspect-square reveal" style="transition-delay: 400ms;"><img src="images/IMG_4314.jpeg" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"></div>
+                <div class="rounded-3xl overflow-hidden aspect-square reveal" style="transition-delay: 500ms;"><img src="images/IMG_7972.jpeg" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"></div>
             </div>
-            
-            <div class="max-w-4xl mx-auto bg-clean-light p-8 rounded-xl border border-gray-200">
-                <div class="text-center">
-                    <div class="text-clean-blue text-5xl mb-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+        </div>
+    </section>
+
+    <!-- Final Contact -->
+    <section id="contact" class="py-32 relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto bg-brand-surface rounded-[4rem] p-10 lg:p-20 border border-white/5 shadow-2xl reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                    <div>
+                        <h2 class="text-5xl font-black mb-8 leading-tight">Elevate Your <br><span class="text-brand-orange">Environment</span> Today.</h2>
+                        <p class="text-gray-400 text-lg mb-12">Connect with our team to discuss your project or schedule an elite walkthrough.</p>
+
+                        <div class="space-y-8">
+                            <div class="flex items-center space-x-6 group">
+                                <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-brand-orange transition-all">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <a href="tel:779-390-4663" class="text-2xl font-bold hover:text-brand-orange">779-390-4663</a>
+                            </div>
+                            <div class="flex items-center space-x-6 group">
+                                <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-brand-orange transition-all">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <a href="mailto:Billscleaningservice779@gmail.com" class="text-2xl font-bold hover:text-brand-orange">Billscleaningservice779@gmail.com</a>
+                            </div>
+                            <div class="flex space-x-6 pt-10">
+                                <a href="https://x.com/Billscleanser" target="_blank" class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-orange transition-all"><i class="fab fa-x-twitter"></i></a>
+                                <a href="https://www.instagram.com/Billscleaning779/" target="_blank" class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-orange transition-all"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-xl italic mb-6">"We're just getting started, but we're committed to earning your trust with exceptional service and attention to detail."</p>
-                    <div class="font-bold text-lg">- Bill, Owner</div>
-                    <p class="text-gray-600 mt-2">Bill's Cleaning Service</p>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="text" id="name" placeholder="Full Name" required class="bg-brand-dark p-5 rounded-2xl border border-white/5 focus:border-brand-orange transition-all">
+                            <input type="tel" id="phone" placeholder="Phone Number" required class="bg-brand-dark p-5 rounded-2xl border border-white/5 focus:border-brand-orange transition-all">
+                        </div>
+                        <input type="email" id="email" placeholder="Email Address" class="w-full bg-brand-dark p-5 rounded-2xl border border-white/5 focus:border-brand-orange transition-all">
+                        <select id="service-type" required class="w-full bg-brand-dark p-5 rounded-2xl border border-white/5 focus:border-brand-orange transition-all appearance-none">
+                            <option value="">Select Service Type</option>
+                            <option value="residential">Residential Haven</option>
+                            <option value="deep">Elite Deep Clean</option>
+                            <option value="move">Precision Move In/Out</option>
+                            <option value="commercial">Commercial Portfolio</option>
+                        </select>
+                        <textarea id="message" placeholder="Details of your project..." rows="4" class="w-full bg-brand-dark p-5 rounded-2xl border border-white/5 focus:border-brand-orange transition-all"></textarea>
+                        <button type="submit" class="w-full bg-brand-orange text-white py-6 rounded-2xl font-black text-xl hover:shadow-orange-glow transition-all">Send Inquiry</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-clean-dark text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="bg-white text-clean-blue p-2 rounded-lg">
-                            <i class="fas fa-broom text-2xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold">Bill's Cleaning Service</h3>
-                            <p class="text-gray-300">Professional Cleaning Solutions</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 mb-6 max-w-md">A new local cleaning business dedicated to providing exceptional cleaning services with attention to detail, eco-friendly products, and reliable service.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="bg-gray-700 hover:bg-gray-600 p-3 rounded-full transition-colors">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://x.com/Billscleanser" target="_blank" class="bg-gray-700 hover:bg-gray-600 p-3 rounded-full transition-colors">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/Billscleaning779/" target="_blank" class="bg-gray-700 hover:bg-gray-600 p-3 rounded-full transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
+    <footer class="py-20 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-10">
+                <div class="bg-brand-orange p-2 rounded-xl">
+                    <i class="fas fa-sparkles text-white"></i>
                 </div>
-                
-                <div>
-                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
-                    <ul id="footer-links" class="space-y-3"></ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-phone-alt mt-1 mr-3 text-clean-teal"></i>
-                            <a href="tel:779-390-4663" class="hover:underline">779-390-4663</a>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-envelope mt-1 mr-3 text-clean-teal"></i>
-                            <a href="mailto:Billscleaningservice779@gmail.com" class="hover:underline">Billscleaningservice779@gmail.com</a>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-clock mt-1 mr-3 text-clean-teal"></i>
-                            <span>Mon-Sun: 8am-8pm</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="mt-8 p-4 bg-gray-800 rounded-lg">
-                        <p class="font-bold mb-2">New Customer Offer</p>
-                        <p class="text-sm text-gray-300">20% off your first service when you mention this website!</p>
-                    </div>
-                </div>
+                <span class="text-xl font-extrabold tracking-tight">BILL'S <span class="text-brand-orange text-xs uppercase tracking-widest block font-bold">Premium Cleaning</span></span>
             </div>
-            
-            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; <span id="current-year"></span> Bill's Cleaning Service. All rights reserved.</p>
-                <p class="mt-2 text-sm">A new local business proudly serving our community.</p>
-            </div>
+            <p class="text-gray-500 text-sm">&copy; <span id="current-year"></span> Bill's Cleaning Service. Crafting pristine environments in Porter & Will County.</p>
         </div>
     </footer>
 
     <!-- Success Modal -->
-    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-xl p-8 max-w-md mx-4">
-            <div class="text-center">
-                <div class="bg-green-100 text-green-600 p-3 rounded-full inline-block mb-4">
-                    <i class="fas fa-check text-3xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-2">Request Submitted!</h3>
-                <p class="text-gray-600 mb-6">Thank you for your interest in Bill's Cleaning Service. We'll contact you within 24 hours at the phone number you provided.</p>
-                <button id="close-modal" class="bg-clean-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors">
-                    Close
-                </button>
+    <div id="success-modal" class="fixed inset-0 bg-black/90 backdrop-blur-xl z-[1000] hidden items-center justify-center">
+        <div class="bg-brand-surface p-12 rounded-[3rem] border border-brand-orange/30 text-center max-w-sm mx-4">
+            <div class="w-24 h-24 bg-brand-orange/20 text-brand-orange rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse-glow">
+                <i class="fas fa-paper-plane text-4xl"></i>
             </div>
+            <h4 class="text-3xl font-black mb-4">Request Sent</h4>
+            <p class="text-gray-400 mb-8">Your inquiry is being reviewed. Expect a personalized response within 24 hours.</p>
+            <button onclick="closeModal('success')" class="bg-brand-orange text-white w-full py-4 rounded-2xl font-bold">Close</button>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="review-modal" class="fixed inset-0 bg-black/90 backdrop-blur-xl z-[1000] hidden items-center justify-center">
+        <div class="bg-brand-surface p-10 rounded-[3rem] border border-white/5 w-full max-w-lg mx-4">
+            <h4 class="text-3xl font-black mb-10 text-center">Share Your Story</h4>
+            <form id="review-form" onsubmit="handleReviewSubmit(event)" class="space-y-6">
+                <div class="flex justify-center space-x-3 mb-8" id="star-rating">
+                    <i class="fas fa-star text-3xl text-gray-700 cursor-pointer star-btn" onclick="setRating(1)"></i>
+                    <i class="fas fa-star text-3xl text-gray-700 cursor-pointer star-btn" onclick="setRating(2)"></i>
+                    <i class="fas fa-star text-3xl text-gray-700 cursor-pointer star-btn" onclick="setRating(3)"></i>
+                    <i class="fas fa-star text-3xl text-gray-700 cursor-pointer star-btn" onclick="setRating(4)"></i>
+                    <i class="fas fa-star text-3xl text-gray-700 cursor-pointer star-btn" onclick="setRating(5)"></i>
+                </div>
+                <input type="text" id="rev-name" placeholder="Your Name" required class="w-full bg-brand-dark p-5 rounded-2xl border border-white/5">
+                <input type="text" id="rev-location" placeholder="City" required class="w-full bg-brand-dark p-5 rounded-2xl border border-white/5">
+                <textarea id="rev-text" placeholder="Tell us about the results..." required rows="4" class="w-full bg-brand-dark p-5 rounded-2xl border border-white/5"></textarea>
+                <div class="grid grid-cols-2 gap-4">
+                    <button type="button" onclick="closeModal('review')" class="bg-white/5 py-4 rounded-2xl font-bold">Cancel</button>
+                    <button type="submit" class="bg-brand-orange text-white py-4 rounded-2xl font-bold">Post Review</button>
+                </div>
+            </form>
         </div>
     </div>
 
     <script>
-        // Data layer
-        const navigationItems = [
-            { "label": "Home", "href": "#home", "icon": "fas fa-home" },
-            { "label": "How It Works", "href": "#how-it-works", "icon": "fas fa-tasks" },
-            { "label": "Services", "href": "#services", "icon": "fas fa-broom" },
-            { "label": "Gallery", "href": "#gallery", "icon": "fas fa-images" },
-            { "label": "FAQ", "href": "#faq", "icon": "fas fa-question-circle" },
-            { "label": "Contact", "href": "#contact", "icon": "fas fa-phone-alt" }
-        ];
-
+        // Data Configuration
         const services = [
             { 
-                "title": "Residential Cleaning", 
-                "description": "Keep your home consistently beautiful. Our standard cleaning covers everything you need for a comfortable living environment.",
-                "icon": "fas fa-home",
-                "image": "images/IMG_3331.jpeg",
-                "color": "bg-blue-100 text-clean-blue",
-                "features": ["Dusting all surfaces", "Vacuuming & mopping floors", "Sanitizing bathrooms", "Kitchen countertops & sinks", "General tidying up"]
+                "title": "Residential Haven",
+                "desc": "Regular maintenance for homes that demand perfection. Dust-free, allergen-safe, and visually stunning.",
+                "img": "images/IMG_3331.jpeg",
+                "accent": "text-brand-orange"
             },
             { 
-                "title": "Deep Cleaning", 
-                "description": "A comprehensive top-to-bottom scrub. Ideal for seasonal cleaning or when your space needs extra attention.",
-                "icon": "fas fa-broom",
-                "image": "images/IMG_3494.jpeg",
-                "color": "bg-teal-100 text-clean-teal",
-                "features": ["Baseboards & door frames", "Inside window tracks", "Behind large appliances", "Deep scrubbing of tile/grout", "Detailed cabinet cleaning"]
+                "title": "Elite Deep Clean",
+                "desc": "A surgical approach to cleaning. We target areas others ignore, ensuring a laboratory-grade result.",
+                "img": "images/IMG_3494.jpeg",
+                "accent": "text-white"
             },
             { 
-                "title": "Move In/Out Cleaning", 
-                "description": "Ensure a fresh start in your new home or leave your old one spotless for the next residents.",
-                "icon": "fas fa-truck-moving",
-                "image": "images/IMG_2395.jpeg",
-                "color": "bg-purple-100 text-purple-700",
-                "features": ["Inside all cabinets & drawers", "Full appliance deep clean", "Wall spotting", "Floor-to-ceiling dusting", "Sanitizing every surface"]
-            },
-            { 
-                "title": "Commercial Cleaning",
-                "description": "Create a professional and healthy environment for your employees and clients.",
-                "icon": "fas fa-building",
-                "image": "images/IMG_4314.jpeg",
-                "color": "bg-amber-100 text-amber-700",
-                "features": ["Workspace sanitization", "Common area upkeep", "Waste management", "Restroom replenishment", "Nightly or weekly options"]
-            },
-            { 
-                "title": "Eco-Friendly Cleaning", 
-                "description": "Safe for kids, safe for pets, and safe for the planet. We use only certified non-toxic products.",
-                "icon": "fas fa-leaf",
-                "image": "images/IMG_0299.jpeg",
-                "color": "bg-green-100 text-green-700",
-                "features": ["Plant-based solutions", "No harsh chemical odors", "Essential oil scents", "HEPA-filter vacuuming", "Sustainable materials"]
-            },
-            { 
-                "title": "Specialty Projects",
-                "description": "Post-construction, events, or specific one-time needs. We tailor our skills to your unique situation.",
-                "icon": "fas fa-clipboard-list",
-                "image": "images/IMG_7972.jpeg",
-                "color": "bg-indigo-100 text-indigo-700",
-                "features": ["Construction dust removal", "Pre/Post event cleanup", "Interior window cleaning", "Organization services", "Custom request handling"]
+                "title": "Commercial Portfolio",
+                "desc": "Tailored janitorial solutions for offices that value productivity and a professional aesthetic.",
+                "img": "images/IMG_4314.jpeg",
+                "accent": "text-brand-orange"
             }
         ];
 
-        const features = [
-            { 
-                "title": "Local & New", 
-                "description": "As a new local business, we bring fresh energy and personalized attention to every job.",
-                "icon": "fas fa-heart"
-            },
-            { 
-                "title": "Eco-Friendly Products", 
-                "description": "We use environmentally safe cleaning products that are effective yet gentle on surfaces.",
-                "icon": "fas fa-leaf"
-            },
-            { 
-                "title": "Reliable Service", 
-                "description": "We show up on time and complete the job to your satisfaction, guaranteed.",
-                "icon": "fas fa-clock"
-            },
-            { 
-                "title": "Attention to Detail", 
-                "description": "We don't just clean surfaces; we ensure every corner and crevice is spotless.",
-                "icon": "fas fa-search"
-            }
+        let reviews = [
+            { name: "Sarah M.", loc: "Valparaiso", rating: 5, text: "The team's attention to detail is remarkable. They treated my home like a showroom.", date: "2d ago" },
+            { name: "James K.", loc: "Lockport", rating: 5, text: "Elite service. The deep clean revealed details in my stone floors I hadn't seen in years.", date: "1w ago" },
+            { name: "Elena R.", loc: "Chicago", rating: 5, text: "Reliable, professional, and consistent. The gold standard for city apartment care.", date: "2w ago" }
         ];
 
-        const footerLinks = [
-            { "label": "Home", "href": "#home" },
-            { "label": "Services", "href": "#services" },
-            { "label": "About Us", "href": "#why-us" },
-            { "label": "Contact", "href": "#contact" }
-        ];
-
-        // Reusable render functions
-        function renderNavItems(items) {
-            return items.map(item => 
-                `<li><a href="${item.href}" class="text-gray-700 hover:text-clean-blue font-medium transition-colors">
-                    <i class="${item.icon} mr-2"></i>${item.label}
-                </a></li>`
-            ).join("");
+        // UI Logic
+        function renderServices() {
+            document.getElementById('services-grid').innerHTML = services.map((s, i) => `
+                <div class="group bg-brand-surface rounded-[2.5rem] overflow-hidden border border-white/5 hover:border-brand-orange/30 transition-all reveal" style="transition-delay: ${i*100}ms">
+                    <div class="aspect-[16/10] overflow-hidden relative">
+                        <img src="${s.img}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-75 group-hover:brightness-100">
+                    </div>
+                    <div class="p-10">
+                        <h4 class="text-2xl font-black mb-4 ${s.accent}">${s.title}</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">${s.desc}</p>
+                        <a href="#contact" class="inline-flex items-center font-bold text-xs uppercase tracking-widest hover:text-brand-orange">Inquire <i class="fas fa-arrow-right ml-3"></i></a>
+                    </div>
+                </div>
+            `).join('');
         }
 
-        function renderServices(items) {
-            return items.map(item => 
-                `<div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition-all duration-300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+        function renderReviews() {
+            document.getElementById('reviews-grid').innerHTML = reviews.map((r, i) => `
+                <div class="bg-brand-surface p-10 rounded-[2.5rem] border border-white/5 hover:-translate-y-2 transition-all reveal" style="transition-delay: ${i*100}ms">
+                    <div class="flex text-brand-orange text-xs mb-6 space-x-1">
+                        ${Array(r.rating).fill('<i class="fas fa-star"></i>').join('')}
                     </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="${item.color} p-3 rounded-lg mr-3">
-                                <i class="${item.icon} text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-clean-dark">${item.title}</h3>
+                    <p class="text-gray-400 italic mb-8 leading-relaxed">"${r.text}"</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-brand-orange text-white rounded-full flex items-center justify-center font-black">${r.name[0]}</div>
+                        <div>
+                            <p class="font-bold">${r.name}</p>
+                            <p class="text-[10px] uppercase font-black text-gray-600 tracking-widest">${r.loc} • ${r.date}</p>
                         </div>
-                        <p class="text-gray-600 mb-4">${item.description}</p>
-                        <ul class="space-y-2">
-                            ${item.features.map(feature =>
-                                `<li class="flex items-center text-sm text-gray-500">
-                                    <i class="fas fa-check text-clean-teal mr-2"></i>${feature}
-                                </li>`
-                            ).join("")}
-                        </ul>
                     </div>
-                </div>`
-            ).join("");
+                </div>
+            `).join('');
         }
 
-        function renderFeatures(items) {
-            return items.map(item => 
-                `<div class="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
-                    <div class="text-clean-blue text-4xl mb-4">
-                        <i class="${item.icon}"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-clean-dark mb-2">${item.title}</h3>
-                    <p class="text-gray-600 text-sm">${item.description}</p>
-                </div>`
-            ).join("");
+        // Reactive Calculator
+        let rCount = 2;
+        let cLevel = 'standard';
+
+        function adjustRooms(d) {
+            rCount = Math.min(8, Math.max(1, rCount + d));
+            document.getElementById('room-count').innerText = rCount;
+            updatePrice();
         }
 
-        // Initialize page content
-        document.addEventListener("DOMContentLoaded", function() {
-            // Set current year
-            document.getElementById("current-year").textContent = new Date().getFullYear();
-            
-            // Render UI components
-            document.getElementById("nav-list").innerHTML = renderNavItems(navigationItems);
-            document.getElementById("mobile-nav-list").innerHTML = renderNavItems(navigationItems);
-            document.getElementById("services-grid").innerHTML = renderServices(services);
-            document.getElementById("features-grid").innerHTML = renderFeatures(features);
-            document.getElementById("footer-links").innerHTML = footerLinks.map(link =>
-                `<li><a href="${link.href}" class="text-gray-300 hover:text-white transition-colors">${link.label}</a></li>`
-            ).join("");
-            
-            // Mobile menu toggle
-            const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-            const mobileNav = document.getElementById("mobile-nav");
-            
-            mobileMenuBtn.addEventListener("click", () => {
-                mobileNav.classList.toggle("hidden");
-                const icon = mobileMenuBtn.querySelector("i");
-                icon.classList.toggle("fa-bars");
-                icon.classList.toggle("fa-times");
+        function setCalcLevel(l) {
+            cLevel = l;
+            document.querySelectorAll('.calc-btn').forEach(b => {
+                b.classList.remove('bg-brand-orange', 'border-brand-orange');
+                b.classList.add('border-white/10');
             });
+            document.getElementById(`calc-${l}`).classList.add('bg-brand-orange', 'border-brand-orange');
+            document.getElementById(`calc-${l}`).classList.remove('border-white/10');
+            updatePrice();
+        }
 
-            // Form handling
-            const contactForm = document.getElementById("contact-form");
-            const successModal = document.getElementById("success-modal");
-            const closeModal = document.getElementById("close-modal");
+        function updatePrice() {
+            let p = 80 + (rCount * 25);
+            if (cLevel === 'deep') p *= 1.6;
+            document.getElementById('total-estimate').innerText = Math.round(p);
+        }
 
-            if (contactForm) {
-                contactForm.addEventListener("submit", (e) => {
-                    e.preventDefault();
-                    
-                    const submitBtn = document.getElementById("submit-btn");
-                    const btnText = document.getElementById("btn-text");
-                    const btnLoader = document.getElementById("btn-loader");
+        // Modal/General UI
+        function openModal(id) {
+            document.getElementById(`${id}-modal`).classList.remove('hidden');
+            document.getElementById(`${id}-modal`).classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
 
-                    // Basic validation check
-                    const phone = document.getElementById("phone").value;
-                    const phoneRegex = /^[0-9\-+() ]{7,20}$/;
-                    if (!phoneRegex.test(phone)) {
-                        alert("Please enter a valid phone number.");
-                        return;
-                    }
+        function closeModal(id) {
+            document.getElementById(`${id}-modal`).classList.add('hidden');
+            document.getElementById(`${id}-modal`).classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
 
-                    // Show loading state
-                    submitBtn.disabled = true;
-                    btnText.classList.add("hidden");
-                    btnLoader.classList.remove("hidden");
+        let curRating = 0;
+        function setRating(r) {
+            curRating = r;
+            document.querySelectorAll('.star-btn').forEach((s, i) => {
+                s.classList.toggle('text-brand-orange', i < r);
+                s.classList.toggle('text-gray-700', i >= r);
+            });
+        }
 
-                    // Simulate API call
-                    setTimeout(() => {
-                        successModal.classList.remove("hidden");
-                        contactForm.reset();
+        function handleReviewSubmit(e) {
+            e.preventDefault();
+            reviews.unshift({
+                name: document.getElementById('rev-name').value,
+                loc: document.getElementById('rev-location').value,
+                text: document.getElementById('rev-text').value,
+                rating: curRating,
+                date: "Today"
+            });
+            renderReviews();
+            closeModal('review');
+        }
 
-                        // Reset button state
-                        submitBtn.disabled = false;
-                        btnText.classList.remove("hidden");
-                        btnLoader.classList.add("hidden");
-                    }, 1500);
+        // Lifecycle
+        document.addEventListener('DOMContentLoaded', () => {
+            renderServices();
+            renderReviews();
+            updatePrice();
+            document.getElementById('current-year').innerText = new Date().getFullYear();
+
+            // Reveal observers
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) e.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Comparison Slider
+            const slider = document.getElementById('diff-slider');
+            if (slider) {
+                slider.addEventListener('input', (e) => {
+                    const v = e.target.value;
+                    document.getElementById('before-mask').style.width = v + '%';
+                    document.getElementById('slider-handle').style.left = v + '%';
                 });
             }
 
-            if (closeModal) {
-                closeModal.addEventListener("click", () => {
-                    successModal.classList.add("hidden");
-                });
-            }
+            // Forms
+            document.getElementById('contact-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                openModal('success');
+                e.target.reset();
+            });
 
             // FAQ Accordion
-            const faqBtns = document.querySelectorAll(".faq-btn");
-            faqBtns.forEach(btn => {
-                btn.addEventListener("click", () => {
+            document.querySelectorAll('.faq-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
                     const content = btn.nextElementSibling;
-                    const icon = btn.querySelector("i");
-
-                    content.classList.toggle("hidden");
-                    icon.classList.toggle("rotate-180");
+                    const icon = btn.querySelector('i');
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                    btn.parentElement.classList.toggle('border-brand-orange/30');
                 });
             });
 
-            // Close modal on click outside
-            window.addEventListener("click", (e) => {
-                if (e.target === successModal) {
-                    successModal.classList.add("hidden");
-                }
+            // Mobile Menu
+            document.getElementById('menu-toggle').addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.remove('hidden');
+            });
+            document.getElementById('menu-close').addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+            document.querySelectorAll('#mobile-menu a').forEach(a => {
+                a.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
             });
         });
     </script>
