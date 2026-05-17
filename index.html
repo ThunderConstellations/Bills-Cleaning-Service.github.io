@@ -104,9 +104,9 @@
             
             <div class="hidden lg:flex items-center space-x-10 text-sm font-semibold text-gray-400">
                 <a href="#home" class="hover:text-brand-orange transition-colors">Home</a>
+                <a href="#process" class="hover:text-brand-orange transition-colors">Process</a>
                 <a href="#services" class="hover:text-brand-orange transition-colors">Services</a>
-                <a href="#results" class="hover:text-brand-orange transition-colors">Results</a>
-                <a href="#reviews" class="hover:text-brand-orange transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-brand-orange transition-colors">FAQ</a>
                 <a href="#contact" class="bg-white text-black px-6 py-2.5 rounded-full hover:bg-brand-orange hover:text-white transition-all shadow-lg">Get Started</a>
             </div>
 
@@ -120,9 +120,9 @@
     <div id="mobile-menu" class="fixed inset-0 bg-brand-dark z-[100] flex flex-col items-center justify-center space-y-8 text-2xl font-bold hidden">
         <button id="menu-close" class="absolute top-8 right-8 text-4xl text-gray-500 hover:text-brand-orange">&times;</button>
         <a href="#home" class="hover:text-brand-orange">Home</a>
+        <a href="#process" class="hover:text-brand-orange">Process</a>
         <a href="#services" class="hover:text-brand-orange">Services</a>
-        <a href="#results" class="hover:text-brand-orange">Results</a>
-        <a href="#reviews" class="hover:text-brand-orange">Reviews</a>
+        <a href="#faq" class="hover:text-brand-orange">FAQ</a>
         <a href="#contact" class="text-brand-orange">Book Now</a>
     </div>
 
@@ -171,6 +171,40 @@
         <!-- Background decor -->
         <div class="absolute top-1/2 left-0 w-96 h-96 bg-brand-orange/10 blur-[120px] -translate-y-1/2 -translate-x-1/2"></div>
     </header>
+
+    <!-- How It Works -->
+    <section id="process" class="py-32 bg-brand-dark reveal border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-brand-orange font-black uppercase tracking-widest text-sm mb-4">The Protocol</h2>
+                <h3 class="text-5xl lg:text-6xl font-extrabold mb-6">Pristine in 3 Steps.</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                <!-- Step 1 -->
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 bg-brand-surface border border-white/10 rounded-[2rem] flex items-center justify-center text-4xl font-black text-brand-orange mx-auto mb-8 shadow-2xl">1</div>
+                    <h4 class="text-2xl font-bold mb-4">Digital Inquiry</h4>
+                    <p class="text-gray-500 leading-relaxed">Submit your project details via our reactive form or direct line for an instant consultation.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 bg-brand-orange rounded-[2rem] flex items-center justify-center text-4xl font-black text-white mx-auto mb-8 shadow-orange-glow">2</div>
+                    <h4 class="text-2xl font-bold mb-4">Precision Clean</h4>
+                    <p class="text-gray-500 leading-relaxed">Bill's expert team arrives with elite equipment to execute your customized cleaning plan.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 bg-brand-surface border border-white/10 rounded-[2rem] flex items-center justify-center text-4xl font-black text-brand-orange mx-auto mb-8 shadow-2xl">3</div>
+                    <h4 class="text-2xl font-bold mb-4">Elite Handover</h4>
+                    <p class="text-gray-500 leading-relaxed">Step into a redefined environment. We ensure 100% satisfaction before finalizing the project.</p>
+                </div>
+
+                <!-- Connecting lines -->
+                <div class="hidden md:block absolute top-12 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+            </div>
+        </div>
+    </section>
 
     <!-- Trust Stats Ticker -->
     <section class="py-12 bg-brand-surface border-y border-white/5 overflow-hidden">
@@ -401,6 +435,48 @@
                         <li class="flex items-center text-sm text-gray-400"><i class="fas fa-check text-brand-orange mr-3"></i> Loyalty Rewards</li>
                     </ul>
                     <a href="#contact" class="w-full py-4 rounded-2xl border border-white/10 text-center font-bold hover:bg-white hover:text-black transition-all">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-32 bg-brand-dark reveal border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-20">
+                <h2 class="text-brand-orange font-black uppercase tracking-widest text-sm mb-4">Common Inquiries</h2>
+                <h3 class="text-5xl font-extrabold">FAQ.</h3>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-brand-surface rounded-3xl border border-white/5 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-8 text-left flex justify-between items-center group">
+                        <span class="text-xl font-bold">Do I need to be present for the cleaning?</span>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-8 pb-8 text-gray-400 leading-relaxed">
+                        No. Most of our elite clients provide a key or secure access code. We are fully bonded and insured, ensuring total peace of mind for your property.
+                    </div>
+                </div>
+
+                <div class="bg-brand-surface rounded-3xl border border-white/5 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-8 text-left flex justify-between items-center group">
+                        <span class="text-xl font-bold">What products do you use?</span>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-8 pb-8 text-gray-400 leading-relaxed">
+                        We exclusively use high-performance, eco-certified products that are non-toxic and safe for both pets and children. We bring all necessary equipment for every project.
+                    </div>
+                </div>
+
+                <div class="bg-brand-surface rounded-3xl border border-white/5 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-8 text-left flex justify-between items-center group">
+                        <span class="text-xl font-bold">Is there a cancellation fee?</span>
+                        <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-8 pb-8 text-gray-400 leading-relaxed">
+                        We request a 24-hour notice for any schedule changes. Cancellations within 24 hours of the appointment may be subject to a nominal fee to support our dedicated staff.
+                    </div>
                 </div>
             </div>
         </div>
@@ -673,6 +749,17 @@
                 e.preventDefault();
                 openModal('success');
                 e.target.reset();
+            });
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                    btn.parentElement.classList.toggle('border-brand-orange/30');
+                });
             });
 
             // Mobile Menu
