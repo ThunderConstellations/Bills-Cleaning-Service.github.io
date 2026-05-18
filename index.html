@@ -104,6 +104,7 @@
             
             <div class="hidden lg:flex items-center space-x-10 text-sm font-semibold text-gray-400">
                 <a href="#home" class="hover:text-brand-orange transition-colors">Home</a>
+                <a href="#about" class="hover:text-brand-orange transition-colors">About</a>
                 <a href="#process" class="hover:text-brand-orange transition-colors">Process</a>
                 <a href="#services" class="hover:text-brand-orange transition-colors">Services</a>
                 <a href="#faq" class="hover:text-brand-orange transition-colors">FAQ</a>
@@ -120,6 +121,7 @@
     <div id="mobile-menu" class="fixed inset-0 bg-brand-dark z-[100] flex flex-col items-center justify-center space-y-8 text-2xl font-bold hidden">
         <button id="menu-close" class="absolute top-8 right-8 text-4xl text-gray-500 hover:text-brand-orange">&times;</button>
         <a href="#home" class="hover:text-brand-orange">Home</a>
+        <a href="#about" class="hover:text-brand-orange">About</a>
         <a href="#process" class="hover:text-brand-orange">Process</a>
         <a href="#services" class="hover:text-brand-orange">Services</a>
         <a href="#faq" class="hover:text-brand-orange">FAQ</a>
@@ -171,6 +173,43 @@
         <!-- Background decor -->
         <div class="absolute top-1/2 left-0 w-96 h-96 bg-brand-orange/10 blur-[120px] -translate-y-1/2 -translate-x-1/2"></div>
     </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-32 bg-brand-dark reveal overflow-hidden border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                    <div class="relative z-10 rounded-[3rem] overflow-hidden border-[12px] border-white/5 shadow-2xl">
+                        <img src="images/IMG_2395.jpeg" alt="Bill at Work" class="w-full object-cover aspect-square">
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-orange/20 blur-[80px] -z-0"></div>
+                    <div class="absolute top-10 -left-10 bg-brand-surface border border-white/10 p-8 rounded-3xl shadow-2xl z-20 hidden md:block">
+                        <p class="text-brand-orange font-black text-4xl mb-1">10+</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400">Years of<br>Excellence</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-brand-orange font-black uppercase tracking-widest text-sm mb-4">Our Heritage</h2>
+                    <h3 class="text-5xl lg:text-6xl font-extrabold mb-8 leading-tight">The Man Behind <br>The Sparkle.</h3>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        Founded by Bill, a local community member with an obsessive eye for detail, Bill's Cleaning Service was born from a simple mission: to bring elite, laboratory-grade cleanliness to every home and office in our region.
+                    </p>
+                    <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+                        We don't just "clean" spaces; we restore them. By combining professional-grade equipment with a personal commitment to excellence, we've built a reputation as the premier choice for clients who demand nothing less than perfection.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <div class="w-20 h-20 bg-brand-orange rounded-2xl flex items-center justify-center text-white text-3xl shadow-orange-glow">
+                            <i class="fas fa-signature"></i>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold">Bill</p>
+                            <p class="text-brand-orange font-bold uppercase tracking-widest text-xs">Founder & Lead Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- How It Works -->
     <section id="process" class="py-32 bg-brand-dark reveal border-t border-white/5">
